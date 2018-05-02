@@ -1,11 +1,10 @@
-package weatherAPI.weatherRespository;
+package data.weatherRepository;
 
 import com.google.gson.Gson;
 import com.weatherlibraryjava.RequestBlocks;
 import com.weatherlibraryjava.RequestBuilder;
-import weatherAPI.weatherRespository.historyRequests.HistoryRequestBuilder;
-import weatherAPI.weatherRespository.historyRequests.MyRequestBlocks;
-
+import data.weatherRepository.historyRequests.HistoryRequestBuilder;
+import data.weatherRepository.historyRequests.MyRequestBlocks;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
