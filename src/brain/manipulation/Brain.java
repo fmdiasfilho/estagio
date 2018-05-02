@@ -1,22 +1,17 @@
 package brain.manipulation;
 
-import brain.manipulation.conv.ConversationManipulation;
 import com.google.gson.Gson;
 import com.ibm.watson.developer_cloud.assistant.v1.model.DialogNode;
-import com.ibm.watson.developer_cloud.assistant.v1.model.Intent;
-import com.ibm.watson.developer_cloud.assistant.v1.model.IntentExport;
 import com.weatherlibrary.datamodel.Forecastday;
 import com.weatherlibrary.datamodel.Hour;
 import com.weatherlibrary.datamodel.WeatherModel;
-import com.weatherlibraryjava.IRepository;
-import com.weatherlibraryjava.Repository;
 import com.weatherlibraryjava.RequestBlocks;
-import data.Data;
+import data.DataBaseOperations;
+import data.DatabaseManipulation;
 import data.weatherRepository.MyRepository;
 import data.weatherRepository.historyRequests.HistoryWeatherModel;
 import data.weatherRepository.historyRequests.MyWeatherModel;
 
-import javax.lang.model.type.IntersectionType;
 import java.util.*;
 
 public class Brain {
@@ -30,7 +25,7 @@ public class Brain {
     private static final String TODAY_NODE = "node_1_1525255385552";
 
     //For now
-    private static final String API_KEY = "d9b745b8828d4af9bba110610181904";
+
 
     //Formats to dialog nodes texts
     private static final String CURRENT_FORMAT = "Right now at %s and the temperature is %.1f and, for now, apparently will be a %s day!";
@@ -41,24 +36,19 @@ public class Brain {
     private IntentManipulation intentManipulation;
     private ExamplesManipulation examplesManipulation;
     //Temporary
-    private MyWeatherModel currentModel;
-    private MyRepository r;
-    private Gson gson;
+
     //TODO
-    private Data data;
+    private DatabaseManipulation data;
 
     public Brain() throws Exception {
         conversation = new DialogNodeManipulation(CONV_USERNAME,CONV_PASSWORD,CONV_VERSION);
         intentManipulation = new IntentManipulation(CONV_USERNAME,CONV_PASSWORD,CONV_VERSION);
         examplesManipulation = new ExamplesManipulation(CONV_USERNAME,CONV_PASSWORD,CONV_VERSION);
         //TODO
-        data = null;
-        r = new MyRepository();
-        gson = new Gson();
-        currentModel = gson.fromJson(r.GetWeatherData(API_KEY,RequestBlocks.GetBy.CityName, "Lisbon"),MyWeatherModel.class);
+        data = new DatabaseManipulation("Lisbon");
     }
 
-    public void updateCurrentNode(String currentNode){
+    public void updateCurrentNode(String currentNode) throws Exception {
         Calendar rightNow = Calendar.getInstance();
         String hour;
 
@@ -67,12 +57,14 @@ public class Brain {
         else
             hour = String.format("%d:%d",rightNow.get(Calendar.HOUR_OF_DAY), rightNow.get(Calendar.MINUTE));
 
-        String newOutput = String.format(CURRENT_FORMAT, hour, currentModel.getCurrent().temp_c,
-                currentModel.getCurrent().getCondition().getText().toLowerCase());
+        MyWeatherModel weatherModel = data.getCurrentDocument("Lisbon", "Current");
+
+        String newOutput = String.format(CURRENT_FORMAT, hour, weatherModel.getCurrent().temp_c,
+                weatherModel.getCurrent().getCondition().getText().toLowerCase());
         conversation.updateDialogNode(currentNode,newOutput);
     }
 
-    public void fillYesterday() throws Exception {
+   /* public void fillYesterday() throws Exception {
         String historyRequest = r.GetWeatherDataByHistory(API_KEY,RequestBlocks.GetBy.CityName,"Lisbon","2018-04-26");
         System.out.println(historyRequest);
         HistoryWeatherModel history = gson.fromJson(historyRequest,HistoryWeatherModel.class);
@@ -104,6 +96,7 @@ public class Brain {
             System.out.println(current.getTime() + "\n" + output);
         }
     }
+    */
 
     public String addIntents(int counter, String hour){
         String result = "";
@@ -133,29 +126,6 @@ public class Brain {
             }
         }
     }
-
-   /* public void updateNodes(String type){
-
-        switch (type.toLowerCase()) {
-            case "now":
-                updateCurrentNode("node_4_1524150306493");
-        };
-    }
-    */
-
-   /* private void updateAux(String type){
-
-        for(DialogNode d : conversation.listDialogNodes().getDialogNodes()){
-            if(d.getParent() != null && d.getParent().equalsIgnoreCase(TODAY_NODE)){
-                String output = String.format(TODAY_FORMAT,d..getTime().substring(11,16),
-                        current.getTempC(),current.getCondition().getText().toLowerCase());
-                conversation.updateDialogNode(d.getTitle(), newOutput);
-            }
-
-        }
-
-        conversation.updateDialogNode(currentNode,newOutput);
-    }*/
 
     public void list(){
         for(DialogNode d : conversation.listDialogNodes().getDialogNodes()){

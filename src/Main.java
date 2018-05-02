@@ -17,6 +17,7 @@ public class Main {
         Brain b = new Brain();
         Scanner in = new Scanner(System.in);
         int opt;
+        Thread.sleep(5000);
        do{
            System.out.format(MENU,1,"Update current node");
            System.out.format(MENU,2,"List nodes");
@@ -34,10 +35,10 @@ public class Main {
                     b.list();
                     break;
                 case 3:
-                    b.fillYesterday();
+                    //b.fillYesterday();
                     break;
                 case 4:
-                    b.fillToday();
+                   // b.fillToday();
                     break;
                 case 5:
                     b.removeNodes();
