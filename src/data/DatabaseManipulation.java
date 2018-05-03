@@ -1,8 +1,6 @@
 package data;
 
 import com.google.gson.Gson;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
 import com.weatherlibrary.datamodel.Hour;
 import com.weatherlibraryjava.RequestBlocks;
 import data.Enumerations.RequestTypes;
@@ -11,15 +9,12 @@ import data.weatherRepository.historyRequests.HistoryWeatherModel;
 import data.weatherRepository.historyRequests.MyWeatherModel;
 import org.bson.Document;
 import org.junit.Test;
-
-import javax.naming.OperationNotSupportedException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -50,21 +45,6 @@ public class DatabaseManipulation {
     public void addCity(String newCity){
         cities.add(newCity);
     }
-
-    private void treatDate(){
-        DateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
-        dates = new LinkedList<>();
-        for(int i = 0; i > -10 ; i--){
-            dates.add(dateFormat.format(getDate(i)));
-        }
-    }
-
-    private Date getDate(int amountOfDays) {
-        final Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.DATE, amountOfDays);
-        return cal.getTime();
-    }
-
 
     public void updateWeather(RequestTypes type, String city, String date) throws Exception {
         String request = requestWeather(type, city, date);
@@ -100,6 +80,20 @@ public class DatabaseManipulation {
 
     private String translateDocument(Document doc){
         return gson.toJson(doc);
+    }
+
+    private void treatDate(){
+        DateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
+        dates = new LinkedList<>();
+        for(int i = 0; i > -10 ; i--){
+            dates.add(dateFormat.format(getDate(i)));
+        }
+    }
+
+    private Date getDate(int amountOfDays) {
+        final Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, amountOfDays);
+        return cal.getTime();
     }
 
 

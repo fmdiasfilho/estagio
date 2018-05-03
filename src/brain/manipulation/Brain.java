@@ -1,7 +1,6 @@
 package brain.manipulation;
 
 import com.ibm.watson.developer_cloud.assistant.v1.model.DialogNode;
-import com.ibm.watson.developer_cloud.assistant.v1.model.DialogNodeCollection;
 import com.weatherlibrary.datamodel.Hour;
 import data.DatabaseManipulation;
 import data.Enumerations.RequestTypes;
@@ -48,7 +47,7 @@ public class Brain {
     @Test
     public void updateCurrentNode() throws Exception {
         Calendar rightNow = Calendar.getInstance();
-        assertEquals(14,rightNow.get(Calendar.HOUR_OF_DAY));
+        assertEquals(16,rightNow.get(Calendar.HOUR_OF_DAY));
         String hour;
 
         if(Calendar.MINUTE < 10)
@@ -79,32 +78,37 @@ public class Brain {
     @Test
     public void fillToday() throws Exception{
         List<Hour> hours = data.getAllDocs("Lisbon",RequestTypes.Today);
-        assertTrue(hours.size() == 11);
+        System.out.println(hours.size());
+        assertTrue(hours.size() == 17);
         int rightNow =  Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-        assertEquals(12,rightNow);
+        assertEquals(17,rightNow);
         int counter = 0;
-        DialogNodeCollection list = conversation.listDialogNodes();
+
+        List<String> nodes = todayNodesFilter(conversation.listDialogNodes().getDialogNodes());
+
         for(Hour h : hours){
                 String output = String.format(TODAY_FORMAT,h.getTime().substring(11,16),
                         h.getTempC(),h.getCondition().getText().toLowerCase());
-                if(conversation.getDialogNode("Today at" + counter) == null){
+                if(!nodes.contains("Today at" + counter)){
                     conversation.createDialogNode("Today at" + counter, "Today at" + counter, TODAY_NODE,"#At" + counter,output);
                 }else{
                     conversation.updateDialogNode("Today at" + counter, output);
                 }
             counter++;
         }
-        for(DialogNode d : list.getDialogNodes()){
-            if(d != null && d.getTitle().equals("Today at" + counter)){
-                conversation.deleteDialogNode(d.getTitle());
-                counter++;
-            }else
-                break;
-        }
         counter = 0;
     }
 
-
+    private List<String> todayNodesFilter(List<DialogNode> list){
+        List<String> result = new LinkedList<>();
+        for(DialogNode d : list){
+            if(d.getTitle() != null && d.getTitle().length() >= "Today at".length() && d.getTitle().substring(0,8).equals("Today at")){
+                result.add(d.getTitle());
+            }
+        }
+        Collections.sort(result);
+        return result;
+    }
 
     public String addIntents(int counter, String hour){
         String result = "";
