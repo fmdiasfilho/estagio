@@ -1,21 +1,19 @@
 package data;
 
 import com.google.gson.Gson;
-import com.mongodb.MongoClientURI;
-import com.mongodb.*;
-import com.weatherlibrary.datamodel.Forecast;
-import com.weatherlibrary.datamodel.WeatherModel;
+import com.weatherlibrary.datamodel.Hour;
 import com.weatherlibraryjava.RequestBlocks;
 import data.Enumerations.RequestTypes;
 import data.weatherRepository.MyRepository;
 import data.weatherRepository.historyRequests.HistoryWeatherModel;
-import data.weatherRepository.historyRequests.MyRequestBlocks;
 import data.weatherRepository.historyRequests.MyWeatherModel;
 import org.bson.Document;
-
-import java.net.UnknownHostException;
+import org.junit.Test;
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 public class DatabaseManipulation {
 
@@ -26,17 +24,14 @@ public class DatabaseManipulation {
     private MyRepository r;
     private Gson gson;
     private DataBaseOperations db;
-    private int forecastHourCounter;
-    private int historyHourCounter;
     private List<String> cities;
+    private int counter;
 
-    public DatabaseManipulation(String city) throws Exception {
+    public DatabaseManipulation() throws Exception {
        r = new MyRepository();
        gson = new Gson();
        db = new DataBaseOperations();
        cities = new LinkedList<>();
-       addCity(city);
-       requestWeather(RequestTypes.Current,city,null,null);
     }
 
     public void addCity(String newCity){
@@ -44,32 +39,90 @@ public class DatabaseManipulation {
     }
 
 
-    private void requestWeather(RequestTypes type, String value, String date ,RequestBlocks.Days ForecastOfDays) throws Exception {
-        String request = "";
-        String idValue = "";
-        switch (type) {
-            case Current:
-                request = r.GetWeatherData(API_KEY, RequestBlocks.GetBy.CityName, value);
-                idValue = "current";
-                break;
-            case Forecast:
-                request = r.GetWeatherData(API_KEY, RequestBlocks.GetBy.CityName, value, ForecastOfDays);
-                idValue = "forecast" + forecastHourCounter++;
-                break;
-            case History:
-                request = r.GetWeatherDataByHistory(API_KEY, RequestBlocks.GetBy.CityName, value, date);
-                idValue = "history" + historyHourCounter++;
-                break;
-            default:
-                break;
-        }
-        Document doc = Document.parse(request);
-        doc.append("_id", idValue);
-        db.addDocument(value,type.toString(),doc);
+    public Object updateWeather(RequestTypes type, String city, String date) throws Exception {
+        String request = requestWeather(type, city, date);
+        Object model = (date == null) ? gson.fromJson(request,MyWeatherModel.class) : gson.fromJson(request,HistoryWeatherModel.class);
+        processRequestToDB(city,type,model);
+        return model;
     }
 
-    public MyWeatherModel getCurrentDocument(String city, String type) throws Exception {
-        String doc = db.getDocument(city,type,"_id","current");
-        return gson.fromJson(doc,MyWeatherModel.class);
+    public Object getDocument(String city, RequestTypes type) throws Exception {
+        String id = type.toString().toLowerCase();
+        String doc = db.getDocument(city,id,"_id",id);
+        Object result = (type.equals(RequestTypes.Current))? gson.fromJson(doc,MyWeatherModel.class) : gson.fromJson(doc,HistoryWeatherModel.class);
+        return result;
+    }
+
+    private String requestWeather(RequestTypes type, String value, String date) throws Exception {
+        if(!cities.contains(value)){
+            addCity(value);
+        }
+        String request = "";
+        if(type.equals(RequestTypes.Current))
+            request = r.GetWeatherData(API_KEY, RequestBlocks.GetBy.CityName, value);
+        else if(type.equals(RequestTypes.Today) || type.equals(RequestTypes.Yesterday)){
+            request = r.GetWeatherDataByHistory(API_KEY,RequestBlocks.GetBy.CityName,value,date);
+        }else{
+            return null;
+        }
+       return request;
+    }
+
+    private void processRequestToDB(String database, RequestTypes type, Object model) {
+        Document doc = null;
+        String id = type.toString().toLowerCase();
+        if(type.equals(RequestTypes.Current)){
+            doc = Document.parse(gson.toJson(model));
+            doc.append("_id", "current");
+            db.addDocument(database,id,doc);
+        }else{
+            List<Hour> list = ((HistoryWeatherModel)model).getForecast().getForecastday().get(0).getHour();
+            int rightNowHour = type.equals(RequestTypes.Today) ? Calendar.getInstance().get(Calendar.HOUR_OF_DAY) : list.size();
+            for(Hour h: list){
+                    if(counter < rightNowHour){
+                    doc = Document.parse(gson.toJson(h));
+                    doc.append("_id", id + counter++);
+                    db.addDocument(database,id,doc);
+                    }else{
+                        break;
+                    }
+            }
+            counter = 0;
+        }
+    }
+
+    @Test
+    private void processAPIRequestTest() throws Exception {
+        //Current weather to DB
+        String currentRequest = requestWeather(RequestTypes.Current, "Lisbon", null);
+        MyWeatherModel current = gson.fromJson(currentRequest, MyWeatherModel.class);
+        assertNotNull(current);
+        processRequestToDB("Lisbon", RequestTypes.Current, current);
+        //Today weather to DB
+        String todayRequest = requestWeather(RequestTypes.Today, "Lisbon", "2018-05-03");
+        HistoryWeatherModel today = gson.fromJson(todayRequest, HistoryWeatherModel.class);
+        assertNotNull(today);
+        processRequestToDB("Lisbon",RequestTypes.Today, today);
+        //Yesterday weather to DB
+        String yesterdayRequest = requestWeather(RequestTypes.Yesterday,"Lisbon", "2018-05-02");
+        HistoryWeatherModel yesterday = gson.fromJson(yesterdayRequest,HistoryWeatherModel.class);
+        assertNotNull(yesterday);
+        processRequestToDB("Lisbon", RequestTypes.Yesterday, yesterday);
+
+        db.dropDatabase("Lisbon");
+        assertTrue(db.listDB() == 2);
+    }
+
+    @Test
+    private void updateWeatherTest() throws Exception {
+        Object currentModel = updateWeather(RequestTypes.Current,"Lisbon", null);
+        assertNotNull(currentModel);
+        System.out.println(gson.toJson(currentModel));
+        Object todayModel = updateWeather(RequestTypes.Today,"Lisbon", "2018-05-03");
+        assertNotNull(todayModel);
+        System.out.println(gson.toJson(todayModel));
+        Object yesterdayModel = updateWeather(RequestTypes.Yesterday,"Lisbon", "2018-05-02");
+        assertNotNull(yesterdayModel);
+        System.out.println(gson.toJson(yesterdayModel));
     }
 }

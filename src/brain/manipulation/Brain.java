@@ -8,6 +8,7 @@ import com.weatherlibrary.datamodel.WeatherModel;
 import com.weatherlibraryjava.RequestBlocks;
 import data.DataBaseOperations;
 import data.DatabaseManipulation;
+import data.Enumerations.RequestTypes;
 import data.weatherRepository.MyRepository;
 import data.weatherRepository.historyRequests.HistoryWeatherModel;
 import data.weatherRepository.historyRequests.MyWeatherModel;
@@ -17,15 +18,11 @@ import java.util.*;
 public class Brain {
 
     //Access data
-    private static final String DB_URL = "mongodb://Pedro_Feiteira_Celfocus:dztsR2T97aYgQ4I5@internship-shard-00-00-b5j2n.mongodb.net:27017,internship-shard-00-01-b5j2n.mongodb.net:27017,internship-shard-00-02-b5j2n.mongodb.net:27017/test?ssl=true&replicaSet=Internship-shard-0&authSource=admin";
     private static final String CONV_USERNAME = "9eecfbe1-6284-41b7-aa41-4e637f3f12ca";
     private static final String CONV_PASSWORD = "Q6JOwfeBWhxa";
     private static final String CONV_VERSION = "2018-02-16";
     private static final String YESTERDAY_NODE = "node_2_1525252196706";
     private static final String TODAY_NODE = "node_1_1525255385552";
-
-    //For now
-
 
     //Formats to dialog nodes texts
     private static final String CURRENT_FORMAT = "Right now at %s and the temperature is %.1f and, for now, apparently will be a %s day!";
@@ -35,17 +32,14 @@ public class Brain {
     private DialogNodeManipulation conversation;
     private IntentManipulation intentManipulation;
     private ExamplesManipulation examplesManipulation;
-    //Temporary
 
-    //TODO
     private DatabaseManipulation data;
 
     public Brain() throws Exception {
         conversation = new DialogNodeManipulation(CONV_USERNAME,CONV_PASSWORD,CONV_VERSION);
         intentManipulation = new IntentManipulation(CONV_USERNAME,CONV_PASSWORD,CONV_VERSION);
         examplesManipulation = new ExamplesManipulation(CONV_USERNAME,CONV_PASSWORD,CONV_VERSION);
-        //TODO
-        data = new DatabaseManipulation("Lisbon");
+        data = new DatabaseManipulation();
     }
 
     public void updateCurrentNode(String currentNode) throws Exception {
@@ -57,14 +51,14 @@ public class Brain {
         else
             hour = String.format("%d:%d",rightNow.get(Calendar.HOUR_OF_DAY), rightNow.get(Calendar.MINUTE));
 
-        MyWeatherModel weatherModel = data.getCurrentDocument("Lisbon", "Current");
+        MyWeatherModel weatherModel = (MyWeatherModel) data.updateWeather(RequestTypes.Current,"Lisbon",null);
 
         String newOutput = String.format(CURRENT_FORMAT, hour, weatherModel.getCurrent().temp_c,
                 weatherModel.getCurrent().getCondition().getText().toLowerCase());
         conversation.updateDialogNode(currentNode,newOutput);
     }
 
-   /* public void fillYesterday() throws Exception {
+  /* public void fillYesterday() throws Exception {
         String historyRequest = r.GetWeatherDataByHistory(API_KEY,RequestBlocks.GetBy.CityName,"Lisbon","2018-04-26");
         System.out.println(historyRequest);
         HistoryWeatherModel history = gson.fromJson(historyRequest,HistoryWeatherModel.class);
@@ -95,8 +89,7 @@ public class Brain {
                     TODAY_NODE, "#At" + i,output);
             System.out.println(current.getTime() + "\n" + output);
         }
-    }
-    */
+    }*/
 
     public String addIntents(int counter, String hour){
         String result = "";

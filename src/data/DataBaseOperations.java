@@ -42,12 +42,25 @@ public class DataBaseOperations {
         clientDB.getDatabase(database).getCollection(collectionName).drop();
     }
 
+    public void dropDatabase(String database){
+        clientDB.getDatabase(database).drop();
+    }
+
     public void addDatabase(String database){
         clientDB.getDatabase(database);
     }
 
     public void addCollection(String database, String collection){
         clientDB.getDatabase(database).createCollection(collection);
+    }
+
+    public int listDB(){
+        int result = 0;
+        for(String s : clientDB.listDatabaseNames()){
+            result++;
+            System.out.println(s);
+        }
+        return result;
     }
 
     public String getDocument(String database, String collection, String attribute, String value){

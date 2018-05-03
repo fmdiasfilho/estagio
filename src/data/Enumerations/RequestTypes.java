@@ -1,5 +1,5 @@
 package data.Enumerations;
 
 public enum RequestTypes {
-    Current, Forecast, History;
+    Current, Today, Yesterday;
 }
