@@ -45,11 +45,10 @@ public class DatabaseManipulation {
     }
 
 
-    public Object updateWeather(RequestTypes type, String city, String date) throws Exception {
+    public void updateWeather(RequestTypes type, String city, String date) throws Exception {
         String request = requestWeather(type, city, date);
         Object model = (date == null) ? gson.fromJson(request,MyWeatherModel.class) : gson.fromJson(request,HistoryWeatherModel.class);
         processRequestToDB(city,type,model);
-        return model;
     }
 
     public Object getDocument(String city, RequestTypes type) throws Exception {
@@ -155,14 +154,8 @@ public class DatabaseManipulation {
 
     @Test
     private void updateWeatherTest() throws Exception {
-        Object currentModel = updateWeather(RequestTypes.Current,"Lisbon", null);
-        assertNotNull(currentModel);
-        System.out.println(gson.toJson(currentModel));
-        Object todayModel = updateWeather(RequestTypes.Today,"Lisbon", "2018-05-03");
-        assertNotNull(todayModel);
-        System.out.println(gson.toJson(todayModel));
-        Object yesterdayModel = updateWeather(RequestTypes.Yesterday,"Lisbon", "2018-05-02");
-        assertNotNull(yesterdayModel);
-        System.out.println(gson.toJson(yesterdayModel));
+        updateWeather(RequestTypes.Current,"Lisbon", null);
+        updateWeather(RequestTypes.Today,"Lisbon", "2018-05-03");
+        updateWeather(RequestTypes.Yesterday,"Lisbon", "2018-05-02");
     }
 }

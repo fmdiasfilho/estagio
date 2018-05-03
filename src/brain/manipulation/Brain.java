@@ -10,6 +10,7 @@ import com.weatherlibraryjava.RequestBlocks;
 import data.DataBaseOperations;
 import data.DatabaseManipulation;
 import data.Enumerations.RequestTypes;
+import data.threads.UpdatingData;
 import data.weatherRepository.MyRepository;
 import data.weatherRepository.historyRequests.HistoryWeatherModel;
 import data.weatherRepository.historyRequests.MyWeatherModel;
@@ -47,12 +48,14 @@ public class Brain {
         intentManipulation = new IntentManipulation(CONV_USERNAME,CONV_PASSWORD,CONV_VERSION);
         examplesManipulation = new ExamplesManipulation(CONV_USERNAME,CONV_PASSWORD,CONV_VERSION);
         data = new DatabaseManipulation();
+
+        new UpdatingData();
     }
 
     @Test
     public void updateCurrentNode() throws Exception {
         Calendar rightNow = Calendar.getInstance();
-        assertEquals(12,rightNow.get(Calendar.HOUR_OF_DAY));
+        assertEquals(14,rightNow.get(Calendar.HOUR_OF_DAY));
         String hour;
 
         if(Calendar.MINUTE < 10)
