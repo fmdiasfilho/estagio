@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="486ce63f-ba87-4bb8-8f6c-036dd367c825" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data/threads/CurrentThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/threads/TodayThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/threads/UpdateCurrentThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/threads/UpdateTodayThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/threads/UpdatingData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/brain/manipulation/Brain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/brain/manipulation/Brain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/DatabaseManipulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/DatabaseManipulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/threads/YesterdayThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/threads/CurrentThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/threads/CurrentThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/threads/TodayThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/threads/HistoryThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/threads/UpdateCurrentThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/threads/UpdateTodayThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/threads/UpdatingData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/threads/UpdatingData.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +24,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+            <state relative-caret-position="309">
+              <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,8 +36,8 @@
       <file leaf-file-name="Brain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/brain/manipulation/Brain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="111" column="5" lean-forward="true" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+            <state relative-caret-position="149">
+              <caret line="44" column="18" lean-forward="true" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,38 +45,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdatingData.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DatabaseManipulation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/DatabaseManipulation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="68" column="16" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3237#3238#0" expanded="true" />
+                <element signature="e#3276#3277#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdatingData.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/data/threads/UpdatingData.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateTodayThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/threads/UpdateTodayThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateCurrentThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/threads/UpdateCurrentThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CurrentThread.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CurrentThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/threads/CurrentThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="59" lean-forward="true" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+            <state relative-caret-position="136">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TodayThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/threads/TodayThread.java">
+      <file leaf-file-name="HistoryThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/threads/HistoryThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+            <state relative-caret-position="250">
+              <caret line="17" column="53" lean-forward="true" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,15 +144,16 @@
         <option value="$PROJECT_DIR$/src/data/Enumerations/RequestTypes.java" />
         <option value="$PROJECT_DIR$/src/brain/manipulation/DialogNodeManipulation.java" />
         <option value="$PROJECT_DIR$/src/data/DataBaseOperations.java" />
+        <option value="$PROJECT_DIR$/src/data/threads/YesterdayThread.java" />
+        <option value="$PROJECT_DIR$/src/data/threads/UpdateTodayThread.java" />
+        <option value="$PROJECT_DIR$/src/data/threads/UpdateCurrentThread.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/data/DatabaseManipulation.java" />
-        <option value="$PROJECT_DIR$/src/data/threads/YesterdayThread.java" />
         <option value="$PROJECT_DIR$/src/brain/manipulation/Brain.java" />
         <option value="$PROJECT_DIR$/src/data/threads/CurrentThread.java" />
         <option value="$PROJECT_DIR$/src/data/threads/TodayThread.java" />
+        <option value="$PROJECT_DIR$/src/data/threads/HistoryThread.java" />
         <option value="$PROJECT_DIR$/src/data/threads/UpdatingData.java" />
-        <option value="$PROJECT_DIR$/src/data/threads/UpdateTodayThread.java" />
-        <option value="$PROJECT_DIR$/src/data/threads/UpdateCurrentThread.java" />
       </list>
     </option>
   </component>
@@ -324,6 +321,29 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="DatabaseManipulation.treatDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="estagio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="data" />
+      <option name="MAIN_CLASS_NAME" value="data.DatabaseManipulation" />
+      <option name="METHOD_NAME" value="treatDate" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -377,10 +397,12 @@
       <item itemvalue="JUnit.Brain.fillToday" />
       <item itemvalue="JUnit.Brain.fillYesterday" />
       <item itemvalue="JUnit.Brain.updateCurrentNode" />
+      <item itemvalue="JUnit.DatabaseManipulation.treatDate" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.DatabaseManipulation.treatDate" />
         <item itemvalue="JUnit.Brain.updateCurrentNode" />
         <item itemvalue="JUnit.Brain.fillYesterday" />
         <item itemvalue="JUnit.Brain.fillToday" />
@@ -401,18 +423,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Brain_updateCurrentNode - 2018.05.03 at 12h 38m 09s.xml">
-      <configuration name="Brain.updateCurrentNode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Brain_updateCurrentNode - 2018.05.03 at 12h 39m 24s.xml">
-      <configuration name="Brain.updateCurrentNode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Brain_updateCurrentNode - 2018.05.03 at 12h 39m 52s.xml">
-      <configuration name="Brain.updateCurrentNode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Brain_updateCurrentNode - 2018.05.03 at 12h 46m 56s.xml">
-      <configuration name="Brain.updateCurrentNode" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Brain_updateCurrentNode - 2018.05.03 at 12h 48m 19s.xml">
       <configuration name="Brain.updateCurrentNode" configurationId="JUnit" />
     </history-entry>
@@ -431,6 +441,18 @@
     <history-entry file="Brain_updateCurrentNode - 2018.05.03 at 14h 37m 09s.xml">
       <configuration name="Brain.updateCurrentNode" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DatabaseManipulation_treatDate - 2018.05.03 at 15h 11m 42s.xml">
+      <configuration name="DatabaseManipulation.treatDate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DatabaseManipulation_treatDate - 2018.05.03 at 15h 12m 03s.xml">
+      <configuration name="DatabaseManipulation.treatDate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DatabaseManipulation_treatDate - 2018.05.03 at 15h 13m 12s.xml">
+      <configuration name="DatabaseManipulation.treatDate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DatabaseManipulation_treatDate - 2018.05.03 at 15h 13m 28s.xml">
+      <configuration name="DatabaseManipulation.treatDate" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -438,18 +460,18 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.3293011" />
+      <window_info active="true" anchor="bottom" id="Messages" order="9" visible="true" weight="0.3293011" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50125" side_tool="true" weight="0.32985657" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49875" visible="true" weight="0.33333334" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49875" weight="0.33333334" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49865592" visible="true" weight="0.55205655" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49865592" visible="true" weight="0.55205655" />
       <window_info id="Structure" order="1" sideWeight="0.5013441" side_tool="true" weight="0.26156813" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -469,7 +491,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="17" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -799,18 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/DatabaseManipulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="99" column="17" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2743#2744#0" expanded="true" />
-            <element signature="e#2782#2783#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/threads/YesterdayThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -823,28 +833,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+        <state relative-caret-position="309">
+          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/Brain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="111" column="5" lean-forward="true" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/threads/UpdatingData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -862,23 +855,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/threads/TodayThread.java">
+    <entry file="file://$PROJECT_DIR$/src/data/DatabaseManipulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        <state relative-caret-position="148">
+          <caret line="68" column="16" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3237#3238#0" expanded="true" />
+            <element signature="e#3276#3277#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data/threads/CurrentThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="59" lean-forward="true" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+        <state relative-caret-position="136">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/threads/HistoryThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="17" column="53" lean-forward="true" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/Brain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="44" column="18" lean-forward="true" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/threads/UpdatingData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
         </state>
       </provider>
     </entry>

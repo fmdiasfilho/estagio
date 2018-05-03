@@ -47,5 +47,6 @@ public class Main {
                     break;
             }
         }while (opt != 0);
+       System.exit(0);
     }
 }

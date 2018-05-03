@@ -13,7 +13,10 @@ import org.bson.Document;
 import org.junit.Test;
 
 import javax.naming.OperationNotSupportedException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -25,7 +28,7 @@ public class DatabaseManipulation {
 
 
     private static final String API_KEY = "d9b745b8828d4af9bba110610181904";
-    private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
+    private static final String DATE_FORMAT = "yyyy-MM-dd";
 
     private MyRepository r;
     private Gson gson;
@@ -33,7 +36,11 @@ public class DatabaseManipulation {
     private List<String> cities;
     private int counter;
 
+    //To have access in otherclasses
+    public List<String> dates;
+
     public DatabaseManipulation() throws Exception {
+       treatDate();
        r = new MyRepository();
        gson = new Gson();
        db = new DataBaseOperations();
@@ -42,6 +49,20 @@ public class DatabaseManipulation {
 
     public void addCity(String newCity){
         cities.add(newCity);
+    }
+
+    private void treatDate(){
+        DateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
+        dates = new LinkedList<>();
+        for(int i = 0; i > -10 ; i--){
+            dates.add(dateFormat.format(getDate(i)));
+        }
+    }
+
+    private Date getDate(int amountOfDays) {
+        final Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, amountOfDays);
+        return cal.getTime();
     }
 
 

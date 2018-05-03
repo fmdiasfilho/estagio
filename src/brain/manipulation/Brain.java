@@ -1,18 +1,11 @@
 package brain.manipulation;
 
-import com.google.gson.Gson;
 import com.ibm.watson.developer_cloud.assistant.v1.model.DialogNode;
 import com.ibm.watson.developer_cloud.assistant.v1.model.DialogNodeCollection;
-import com.weatherlibrary.datamodel.Forecastday;
 import com.weatherlibrary.datamodel.Hour;
-import com.weatherlibrary.datamodel.WeatherModel;
-import com.weatherlibraryjava.RequestBlocks;
-import data.DataBaseOperations;
 import data.DatabaseManipulation;
 import data.Enumerations.RequestTypes;
 import data.threads.UpdatingData;
-import data.weatherRepository.MyRepository;
-import data.weatherRepository.historyRequests.HistoryWeatherModel;
 import data.weatherRepository.historyRequests.MyWeatherModel;
 import org.junit.Test;
 
@@ -147,4 +140,5 @@ public class Brain {
             System.out.println(d);
         }
     }
+
 }

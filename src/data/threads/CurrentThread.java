@@ -1,5 +1,6 @@
 package data.threads;
 
+import brain.manipulation.Brain;
 import data.DatabaseManipulation;
 import data.Enumerations.RequestTypes;
 
@@ -15,6 +16,7 @@ public class CurrentThread implements Runnable{
                 while(true){
                 fillCurrent();
                     System.out.println("Current updated!");
+                    //5 minutes
                 Thread.sleep(300000);
                 }
             } catch (Exception e) {
