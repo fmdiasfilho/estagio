@@ -52,4 +52,6 @@ public class DialogNodeManipulation extends ConversationManipulation {
         conversation.deleteDialogNode(deleteDialogNodeOptions).execute();
         System.out.format(RETURN_FORMAT,"Delete", "DialogNode", dialogNode);
     }
+
+
 }

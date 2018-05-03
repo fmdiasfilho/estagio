@@ -7,6 +7,7 @@ import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
+import javax.print.Doc;
 import java.net.UnknownHostException;
 import java.util.LinkedList;
 import java.util.List;
@@ -72,4 +73,22 @@ public class DataBaseOperations {
         return doc.toJson();
     }
 
+    public void updateDocument(String database, String collection,String attribute, String value, Document newDoc) {
+        MongoCollection coll = clientDB.getDatabase(database).getCollection(collection);
+        coll.updateOne(eq(attribute, value), new Document("$set", newDoc));
+    }
+
+    public List<Document> getAllCollection(String database, String collection){
+        MongoCollection coll = clientDB.getDatabase(database).getCollection(collection);
+        List<Document> list = new LinkedList<>();
+        MongoCursor<Document> cursor = coll.find().iterator();
+        try {
+            while (cursor.hasNext()) {
+                list.add(cursor.next());
+            }
+        } finally {
+            cursor.close();
+        }
+        return list;
+    }
 }

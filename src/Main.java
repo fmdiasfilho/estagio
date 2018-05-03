@@ -8,9 +8,6 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static final String USERNAME = "9eecfbe1-6284-41b7-aa41-4e637f3f12ca";
-    private static final String PASSWORD = "Q6JOwfeBWhxa";
-    private static final String VERSION_DATE = "2018-02-16";
     private static final String MENU = "%d stands for %s\n";
 
     public static void main(String[] args) throws Exception {
@@ -29,16 +26,16 @@ public class Main {
            in.nextLine();
             switch (opt){
                 case 1:
-                    b.updateCurrentNode("node_4_1524150306493");
+                    b.updateCurrentNode();
                     break;
                 case 2:
                     b.list();
                     break;
                 case 3:
-                    //b.fillYesterday();
+                    b.fillYesterday();
                     break;
                 case 4:
-                   // b.fillToday();
+                    b.fillToday();
                     break;
                 case 5:
                     b.removeNodes();

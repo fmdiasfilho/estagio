@@ -2,6 +2,7 @@ package brain.manipulation;
 
 import com.google.gson.Gson;
 import com.ibm.watson.developer_cloud.assistant.v1.model.DialogNode;
+import com.ibm.watson.developer_cloud.assistant.v1.model.DialogNodeCollection;
 import com.weatherlibrary.datamodel.Forecastday;
 import com.weatherlibrary.datamodel.Hour;
 import com.weatherlibrary.datamodel.WeatherModel;
@@ -12,8 +13,13 @@ import data.Enumerations.RequestTypes;
 import data.weatherRepository.MyRepository;
 import data.weatherRepository.historyRequests.HistoryWeatherModel;
 import data.weatherRepository.historyRequests.MyWeatherModel;
+import org.junit.Test;
 
 import java.util.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 public class Brain {
 
@@ -21,6 +27,7 @@ public class Brain {
     private static final String CONV_USERNAME = "9eecfbe1-6284-41b7-aa41-4e637f3f12ca";
     private static final String CONV_PASSWORD = "Q6JOwfeBWhxa";
     private static final String CONV_VERSION = "2018-02-16";
+    private static final String CURRENT_NODE = "node_4_1524150306493";
     private static final String YESTERDAY_NODE = "node_2_1525252196706";
     private static final String TODAY_NODE = "node_1_1525255385552";
 
@@ -42,8 +49,10 @@ public class Brain {
         data = new DatabaseManipulation();
     }
 
-    public void updateCurrentNode(String currentNode) throws Exception {
+    @Test
+    public void updateCurrentNode() throws Exception {
         Calendar rightNow = Calendar.getInstance();
+        assertEquals(12,rightNow.get(Calendar.HOUR_OF_DAY));
         String hour;
 
         if(Calendar.MINUTE < 10)
@@ -51,45 +60,55 @@ public class Brain {
         else
             hour = String.format("%d:%d",rightNow.get(Calendar.HOUR_OF_DAY), rightNow.get(Calendar.MINUTE));
 
-        MyWeatherModel weatherModel = (MyWeatherModel) data.updateWeather(RequestTypes.Current,"Lisbon",null);
+        MyWeatherModel weatherModel = (MyWeatherModel) data.getDocument("Lisbon",RequestTypes.Current);
+
+        assertNotNull(weatherModel);
 
         String newOutput = String.format(CURRENT_FORMAT, hour, weatherModel.getCurrent().temp_c,
                 weatherModel.getCurrent().getCondition().getText().toLowerCase());
-        conversation.updateDialogNode(currentNode,newOutput);
+        conversation.updateDialogNode(CURRENT_NODE,newOutput);
     }
-
-  /* public void fillYesterday() throws Exception {
-        String historyRequest = r.GetWeatherDataByHistory(API_KEY,RequestBlocks.GetBy.CityName,"Lisbon","2018-04-26");
-        System.out.println(historyRequest);
-        HistoryWeatherModel history = gson.fromJson(historyRequest,HistoryWeatherModel.class);
-        Forecastday forecastday = history.getForecast().getForecastday().get(0);
-        List<Hour> hours = forecastday.getHour();
+    @Test
+   public void fillYesterday() throws Exception {
+        List<Hour> hours = data.getAllDocs("Lisbon", RequestTypes.Yesterday);
+        assertTrue(hours.size() == 24);
         int counter = 0;
         for(Hour h : hours){
             String output = String.format(PAST_FORMAT, h.getTime().substring(11,16), h.getTempC(),h.getCondition().getText().toLowerCase());
-            conversation.createDialogNode("At" + counter,"At" + counter,
-                    YESTERDAY_NODE, "#" + getIntent("At" + counter),output);
-            System.out.println(h.getTime() + "\n" + output);
+            conversation.updateDialogNode("At" + counter,output);
             counter++;
         }
     }
 
+    @Test
     public void fillToday() throws Exception{
-        String request = r.GetWeatherDataByHistory(API_KEY,RequestBlocks.GetBy.CityName,"Lisbon", "2018-05-02");
-        System.out.println(request);
-        HistoryWeatherModel history = gson.fromJson(request, HistoryWeatherModel.class);
-        Forecastday forecastday = history.getForecast().getForecastday().get(0);
-        List<Hour> hours = forecastday.getHour();
-        Calendar rightNow = Calendar.getInstance();
-        for(int i = 0; i < rightNow.get(Calendar.HOUR_OF_DAY); i++){
-            Hour current = hours.get(i);
-            String output = String.format(TODAY_FORMAT,current.getTime().substring(11,16),
-                    current.getTempC(),current.getCondition().getText().toLowerCase());
-            conversation.createDialogNode("Today at" + i, "Today at" + i,
-                    TODAY_NODE, "#At" + i,output);
-            System.out.println(current.getTime() + "\n" + output);
+        List<Hour> hours = data.getAllDocs("Lisbon",RequestTypes.Today);
+        assertTrue(hours.size() == 11);
+        int rightNow =  Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+        assertEquals(12,rightNow);
+        int counter = 0;
+        DialogNodeCollection list = conversation.listDialogNodes();
+        for(Hour h : hours){
+                String output = String.format(TODAY_FORMAT,h.getTime().substring(11,16),
+                        h.getTempC(),h.getCondition().getText().toLowerCase());
+                if(conversation.getDialogNode("Today at" + counter) == null){
+                    conversation.createDialogNode("Today at" + counter, "Today at" + counter, TODAY_NODE,"#At" + counter,output);
+                }else{
+                    conversation.updateDialogNode("Today at" + counter, output);
+                }
+            counter++;
         }
-    }*/
+        for(DialogNode d : list.getDialogNodes()){
+            if(d != null && d.getTitle().equals("Today at" + counter)){
+                conversation.deleteDialogNode(d.getTitle());
+                counter++;
+            }else
+                break;
+        }
+        counter = 0;
+    }
+
+
 
     public String addIntents(int counter, String hour){
         String result = "";

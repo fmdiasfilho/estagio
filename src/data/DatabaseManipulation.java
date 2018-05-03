@@ -1,6 +1,8 @@
 package data;
 
 import com.google.gson.Gson;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 import com.weatherlibrary.datamodel.Hour;
 import com.weatherlibraryjava.RequestBlocks;
 import data.Enumerations.RequestTypes;
@@ -9,9 +11,13 @@ import data.weatherRepository.historyRequests.HistoryWeatherModel;
 import data.weatherRepository.historyRequests.MyWeatherModel;
 import org.bson.Document;
 import org.junit.Test;
+
+import javax.naming.OperationNotSupportedException;
 import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -49,9 +55,33 @@ public class DatabaseManipulation {
     public Object getDocument(String city, RequestTypes type) throws Exception {
         String id = type.toString().toLowerCase();
         String doc = db.getDocument(city,id,"_id",id);
-        Object result = (type.equals(RequestTypes.Current))? gson.fromJson(doc,MyWeatherModel.class) : gson.fromJson(doc,HistoryWeatherModel.class);
+        Object result = (type.equals(RequestTypes.Current))? gson.fromJson(doc,MyWeatherModel.class) : gson.fromJson(doc,Hour.class);
         return result;
     }
+
+    @Test
+    public List<Hour> getAllDocs(String city, RequestTypes type){
+        List<Document> list = db.getAllCollection(city,type.toString().toLowerCase());
+        assertNotNull(list);
+        List<Hour> result = translateDocuments(list);
+        assertNotNull(result);
+        return result;
+    }
+
+    private List<Hour> translateDocuments(List<Document> list) {
+        List<Hour> result = new LinkedList<>();
+        for(Document d : list){
+            String temp = gson.toJson(d);
+                Hour obj = gson.fromJson(temp,Hour.class);
+                result.add(obj);
+            }
+        return result;
+    }
+
+    private String translateDocument(Document doc){
+        return gson.toJson(doc);
+    }
+
 
     private String requestWeather(RequestTypes type, String value, String date) throws Exception {
         if(!cities.contains(value)){
@@ -73,16 +103,26 @@ public class DatabaseManipulation {
         String id = type.toString().toLowerCase();
         if(type.equals(RequestTypes.Current)){
             doc = Document.parse(gson.toJson(model));
-            doc.append("_id", "current");
-            db.addDocument(database,id,doc);
+            doc.append("_id", id);
+            if(db.getDocument(database,id,"_id",id) == null){
+                db.addDocument(database,id,doc);
+            }else{
+                db.updateDocument(database, id, "_id", id,doc);
+            }
+
         }else{
             List<Hour> list = ((HistoryWeatherModel)model).getForecast().getForecastday().get(0).getHour();
             int rightNowHour = type.equals(RequestTypes.Today) ? Calendar.getInstance().get(Calendar.HOUR_OF_DAY) : list.size();
             for(Hour h: list){
                     if(counter < rightNowHour){
                     doc = Document.parse(gson.toJson(h));
-                    doc.append("_id", id + counter++);
-                    db.addDocument(database,id,doc);
+                    doc.append("_id", id + counter);
+                        if(db.getDocument(database,id,"_id",id + counter) == null){
+                            db.addDocument(database,id,doc);
+                        }else{
+                            db.updateDocument(database, id, "_id", id + counter,doc);
+                        }
+                    counter++;
                     }else{
                         break;
                     }
