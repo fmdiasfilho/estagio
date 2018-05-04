@@ -1,5 +1,6 @@
 package brain.manipulation;
 
+import com.ibm.watson.developer_cloud.assistant.v1.model.CreateValueOptions;
 import com.ibm.watson.developer_cloud.assistant.v1.model.DialogNode;
 import com.weatherlibrary.datamodel.Hour;
 import data.DatabaseManipulation;
@@ -10,9 +11,7 @@ import org.junit.Test;
 
 import java.util.*;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class Brain {
 
@@ -40,7 +39,6 @@ public class Brain {
         intentManipulation = new IntentManipulation(CONV_USERNAME,CONV_PASSWORD,CONV_VERSION);
         examplesManipulation = new ExamplesManipulation(CONV_USERNAME,CONV_PASSWORD,CONV_VERSION);
         data = new DatabaseManipulation();
-
         new UpdatingData();
     }
 
@@ -79,12 +77,13 @@ public class Brain {
     public void fillToday() throws Exception{
         List<Hour> hours = data.getAllDocs("Lisbon",RequestTypes.Today);
         System.out.println(hours.size());
-        assertTrue(hours.size() == 17);
+        assertTrue(hours.size() == 9);
         int rightNow =  Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-        assertEquals(17,rightNow);
+        assertEquals(9,rightNow);
         int counter = 0;
 
         List<String> nodes = todayNodesFilter(conversation.listDialogNodes().getDialogNodes());
+        List<String> availableNodes = new LinkedList<>();
 
         for(Hour h : hours){
                 String output = String.format(TODAY_FORMAT,h.getTime().substring(11,16),
@@ -94,8 +93,10 @@ public class Brain {
                 }else{
                     conversation.updateDialogNode("Today at" + counter, output);
                 }
+            availableNodes.add("Today at" + counter);
             counter++;
         }
+        removeUnavailableNodes(nodes,availableNodes);
         counter = 0;
     }
 
@@ -131,10 +132,10 @@ public class Brain {
         return intentManipulation.getIntent(intentName).getIntentName();
     }
 
-    public void removeTodayNodes(){
-        for(DialogNode d : conversation.listDialogNodes().getDialogNodes()){
-            if(d.getParent() != null && d.getParent().equalsIgnoreCase(TODAY_NODE)){
-                conversation.deleteDialogNode(d.getTitle());
+    public void removeUnavailableNodes(List<String> allNodes, List<String> available){
+        for(String s : allNodes){
+            if(!available.contains(s)){
+                conversation.deleteDialogNode(s);
             }
         }
     }
@@ -144,5 +145,7 @@ public class Brain {
             System.out.println(d);
         }
     }
+
+
 
 }

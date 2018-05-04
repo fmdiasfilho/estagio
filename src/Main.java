@@ -1,8 +1,6 @@
 
 
 import brain.manipulation.Brain;
-import brain.manipulation.IntentManipulation;
-import brain.manipulation.conv.ConversationManipulation;
 
 import java.util.Scanner;
 
@@ -21,7 +19,6 @@ public class Main {
            System.out.format(MENU,3,"Fill yesterday");
            System.out.format(MENU,4,"Fill today");
            System.out.format(MENU,5,"Remove nodes");
-           System.out.format(MENU,6,"Remove today nodes");
            opt = in.nextInt();
            in.nextLine();
             switch (opt){
@@ -40,13 +37,11 @@ public class Main {
                 case 5:
                     b.removeNodes();
                     break;
-                case 6:
-                    b.removeTodayNodes();
-                    break;
                 default:
                     break;
             }
         }while (opt != 0);
        System.exit(0);
     }
+
 }

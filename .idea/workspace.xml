@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="486ce63f-ba87-4bb8-8f6c-036dd367c825" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/brain/manipulation/Brain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/brain/manipulation/Brain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/brain/manipulation/conv/ConversationManipulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/brain/manipulation/conv/ConversationManipulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/DataBaseOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/DataBaseOperations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/DatabaseManipulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/DatabaseManipulation.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,38 +18,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Brain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/brain/manipulation/Brain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="68" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="68" />
-              <folding>
-                <element signature="e#5619#5620#0" expanded="true" />
-                <element signature="e#5698#5699#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DialogNode.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/assistant/5.4.0/assistant-5.4.0-sources.jar!/com/ibm/watson/developer_cloud/assistant/v1/model/DialogNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="271" selection-start-line="271" selection-end-line="271" />
-              <folding>
-                <element signature="e#4471#4472#0" expanded="true" />
-                <element signature="e#4494#4495#0" expanded="true" />
-                <element signature="e#6188#6189#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DialogNodeManipulation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/brain/manipulation/DialogNodeManipulation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+            <state relative-caret-position="309">
+              <caret line="98" column="53" selection-start-line="98" selection-start-column="53" selection-end-line="98" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,7 +45,7 @@
       <file leaf-file-name="Assert.java" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10-sources.jar!/org/junit/Assert.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
+            <state relative-caret-position="17">
               <caret line="646" selection-start-line="646" selection-end-line="646" />
             </state>
           </provider>
@@ -65,22 +54,11 @@
       <file leaf-file-name="DatabaseManipulation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/DatabaseManipulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="67" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="1016">
+              <caret line="142" column="26" selection-start-line="142" selection-start-column="26" selection-end-line="142" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3237#3238#0" expanded="true" />
-                <element signature="e#3276#3277#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdatingData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/threads/UpdatingData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -88,8 +66,11 @@
       <file leaf-file-name="ConversationManipulation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/brain/manipulation/conv/ConversationManipulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="56" lean-forward="true" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+            <state relative-caret-position="357">
+              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,8 +78,8 @@
       <file leaf-file-name="DataBaseOperations.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/DataBaseOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
+            <state relative-caret-position="182">
+              <caret line="82" column="45" lean-forward="true" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,7 +90,7 @@
       <file leaf-file-name="MongoClient.java" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.7.0-rc0/mongo-java-driver-3.7.0-rc0-sources.jar!/com/mongodb/MongoClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
+            <state relative-caret-position="7990">
               <caret line="526" selection-start-line="526" selection-end-line="526" />
               <folding>
                 <element signature="e#20804#20805#0" expanded="true" />
@@ -122,7 +103,7 @@
       <file leaf-file-name="Mongo.java" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.7.0-rc0/mongo-java-driver-3.7.0-rc0-sources.jar!/com/mongodb/Mongo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
+            <state relative-caret-position="11305">
               <caret line="782" selection-start-line="782" selection-end-line="782" />
               <folding>
                 <element signature="e#32315#32316#0" expanded="true" />
@@ -174,24 +155,24 @@
         <option value="$PROJECT_DIR$/src/data/weatherRepository/MyRepository.java" />
         <option value="$PROJECT_DIR$/src/data/weatherRepository/MyCurrentClass.java" />
         <option value="$PROJECT_DIR$/src/data/weatherRepository/historyRequests/MyWeatherModel.java" />
-        <option value="$PROJECT_DIR$/src/brain/manipulation/conv/ConversationManipulation.java" />
         <option value="$PROJECT_DIR$/src/brain/manipulation/ExamplesManipulation.java" />
         <option value="$PROJECT_DIR$/src/brain/manipulation/CounterExamplesManipulation.java" />
         <option value="$PROJECT_DIR$/src/brain/manipulation/IntentManipulation.java" />
         <option value="$PROJECT_DIR$/src/data/Database.java" />
         <option value="$PROJECT_DIR$/src/data/DataB.java" />
         <option value="$PROJECT_DIR$/src/data/Enumerations/RequestTypes.java" />
-        <option value="$PROJECT_DIR$/src/data/DataBaseOperations.java" />
         <option value="$PROJECT_DIR$/src/data/threads/YesterdayThread.java" />
         <option value="$PROJECT_DIR$/src/data/threads/UpdateTodayThread.java" />
         <option value="$PROJECT_DIR$/src/data/threads/UpdateCurrentThread.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/data/threads/CurrentThread.java" />
         <option value="$PROJECT_DIR$/src/data/threads/TodayThread.java" />
         <option value="$PROJECT_DIR$/src/data/threads/HistoryThread.java" />
         <option value="$PROJECT_DIR$/src/data/threads/UpdatingData.java" />
-        <option value="$PROJECT_DIR$/src/data/DatabaseManipulation.java" />
         <option value="$PROJECT_DIR$/src/brain/manipulation/DialogNodeManipulation.java" />
+        <option value="$PROJECT_DIR$/src/brain/manipulation/conv/ConversationManipulation.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/data/DataBaseOperations.java" />
+        <option value="$PROJECT_DIR$/src/data/DatabaseManipulation.java" />
         <option value="$PROJECT_DIR$/src/brain/manipulation/Brain.java" />
       </list>
     </option>
@@ -218,6 +199,25 @@
               <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
               <item name="estagio" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="estagio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="manipulation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="estagio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="manipulation" type="462c0819:PsiDirectoryNode" />
+              <item name="conv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="estagio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
@@ -263,7 +263,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.Brain.fillToday">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="estagio" />
@@ -421,11 +421,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Brain.fillToday" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.DatabaseManipulation.treatDate" />
         <item itemvalue="JUnit.Brain.updateCurrentNode" />
         <item itemvalue="JUnit.Brain.fillYesterday" />
-        <item itemvalue="JUnit.Brain.fillToday" />
       </list>
     </recent_temporary>
   </component>
@@ -443,27 +443,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Brain_updateCurrentNode - 2018.05.03 at 12h 48m 19s.xml">
-      <configuration name="Brain.updateCurrentNode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Brain_updateCurrentNode - 2018.05.03 at 12h 49m 09s.xml">
-      <configuration name="Brain.updateCurrentNode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Brain_updateCurrentNode - 2018.05.03 at 13h 02m 30s.xml">
-      <configuration name="Brain.updateCurrentNode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Brain_updateCurrentNode - 2018.05.03 at 14h 15m 56s.xml">
-      <configuration name="Brain.updateCurrentNode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Brain_updateCurrentNode - 2018.05.03 at 14h 25m 14s.xml">
-      <configuration name="Brain.updateCurrentNode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Brain_updateCurrentNode - 2018.05.03 at 14h 37m 09s.xml">
-      <configuration name="Brain.updateCurrentNode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DatabaseManipulation_treatDate - 2018.05.03 at 15h 11m 42s.xml">
-      <configuration name="DatabaseManipulation.treatDate" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DatabaseManipulation_treatDate - 2018.05.03 at 15h 12m 03s.xml">
       <configuration name="DatabaseManipulation.treatDate" configurationId="JUnit" />
     </history-entry>
@@ -472,6 +451,27 @@
     </history-entry>
     <history-entry file="DatabaseManipulation_treatDate - 2018.05.03 at 15h 13m 28s.xml">
       <configuration name="DatabaseManipulation.treatDate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Brain_fillToday - 2018.05.04 at 09h 08m 07s.xml">
+      <configuration name="Brain.fillToday" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Brain_fillToday - 2018.05.04 at 09h 08m 28s.xml">
+      <configuration name="Brain.fillToday" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Brain_fillToday - 2018.05.04 at 09h 08m 53s.xml">
+      <configuration name="Brain.fillToday" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Brain_fillToday - 2018.05.04 at 09h 08m 59s.xml">
+      <configuration name="Brain.fillToday" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Brain_fillToday - 2018.05.04 at 09h 09m 18s.xml">
+      <configuration name="Brain.fillToday" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Brain_fillToday - 2018.05.04 at 09h 25m 24s.xml">
+      <configuration name="Brain.fillToday" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Brain_fillToday - 2018.05.04 at 09h 26m 48s.xml">
+      <configuration name="Brain.fillToday" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -486,8 +486,8 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50125" side_tool="true" weight="0.32985657" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49875" weight="0.33333334" />
       <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49875" weight="0.33333334" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
@@ -496,8 +496,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39784947" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39784947" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -507,28 +507,28 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3293011" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49875" visible="true" weight="0.33333334" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49865592" visible="true" weight="0.55205655" />
-      <window_info id="Structure" order="1" sideWeight="0.5013441" side_tool="true" weight="0.26156813" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49875" visible="true" weight="0.33333334" />
       <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49865592" visible="true" weight="0.55205655" />
+      <window_info id="Structure" order="1" sideWeight="0.5013441" side_tool="true" weight="0.26156813" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3293011" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39784947" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50125" side_tool="true" weight="0.32985657" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.3293011" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -539,7 +539,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="22" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -703,9 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="273" selection-start-line="273" selection-end-line="273" />
-          <folding>
-            <element signature="e#9604#9605#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -797,40 +794,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/threads/YesterdayThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/threads/UpdateTodayThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/threads/UpdateCurrentThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/threads/YesterdayThread.java" />
+    <entry file="file://$PROJECT_DIR$/src/data/threads/UpdateTodayThread.java" />
+    <entry file="file://$PROJECT_DIR$/src/data/threads/UpdateCurrentThread.java" />
     <entry file="file://$PROJECT_DIR$/src/data/threads/CurrentThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -858,43 +824,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/conv/ConversationManipulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="56" lean-forward="true" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/brain/manipulation/CounterExamplesManipulation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-300">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/DialogNodeManipulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10-sources.jar!/org/junit/Assert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="646" selection-start-line="646" selection-end-line="646" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.7.0-rc0/mongo-java-driver-3.7.0-rc0-sources.jar!/com/mongodb/Mongo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
+        <state relative-caret-position="11305">
           <caret line="782" selection-start-line="782" selection-end-line="782" />
           <folding>
             <element signature="e#32315#32316#0" expanded="true" />
@@ -904,7 +843,7 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.7.0-rc0/mongo-java-driver-3.7.0-rc0-sources.jar!/com/mongodb/MongoClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
+        <state relative-caret-position="7990">
           <caret line="526" selection-start-line="526" selection-end-line="526" />
           <folding>
             <element signature="e#20804#20805#0" expanded="true" />
@@ -913,10 +852,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/conv/ConversationManipulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10-sources.jar!/org/junit/Assert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="646" selection-start-line="646" selection-end-line="646" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/DialogNodeManipulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/DataBaseOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        <state relative-caret-position="182">
+          <caret line="82" column="45" lean-forward="true" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -925,19 +901,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data/DatabaseManipulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="1016">
+          <caret line="142" column="26" selection-start-line="142" selection-start-column="26" selection-end-line="142" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3237#3238#0" expanded="true" />
-            <element signature="e#3276#3277#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/assistant/5.4.0/assistant-5.4.0-sources.jar!/com/ibm/watson/developer_cloud/assistant/v1/model/DialogNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
+        <state relative-caret-position="17">
           <caret line="271" selection-start-line="271" selection-end-line="271" />
           <folding>
             <element signature="e#4471#4472#0" expanded="true" />
@@ -949,11 +923,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/brain/manipulation/Brain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="68" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="68" />
+        <state relative-caret-position="309">
+          <caret line="98" column="53" selection-start-line="98" selection-start-column="53" selection-end-line="98" selection-end-column="53" />
           <folding>
-            <element signature="e#5619#5620#0" expanded="true" />
-            <element signature="e#5698#5699#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -136,10 +136,11 @@ public class DatabaseManipulation {
                         }else{
                             db.updateDocument(database, id, "_id", id + counter,doc);
                         }
-                    counter++;
+
                     }else{
-                        break;
+                        db.deleteDocument(database,id,"_id", id + counter);
                     }
+                counter++;
             }
             counter = 0;
         }

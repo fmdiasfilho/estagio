@@ -2,6 +2,10 @@ package brain.manipulation.conv;
 
 
 import com.ibm.watson.developer_cloud.assistant.v1.Assistant;
+import com.ibm.watson.developer_cloud.assistant.v1.model.*;
+import org.junit.Test;
+
+import java.util.Calendar;
 
 public abstract class ConversationManipulation {
 
@@ -21,4 +25,4 @@ public abstract class ConversationManipulation {
         return new Assistant(version,username,password);
     }
 
-}
+    }

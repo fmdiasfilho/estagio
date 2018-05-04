@@ -78,6 +78,11 @@ public class DataBaseOperations {
         coll.updateOne(eq(attribute, value), new Document("$set", newDoc));
     }
 
+    public void deleteDocument(String database, String collection, String attribute, String value){
+        MongoCollection coll = clientDB.getDatabase(database).getCollection(collection);
+        coll.deleteOne(eq(attribute, value));
+    }
+
     public List<Document> getAllCollection(String database, String collection){
         MongoCollection coll = clientDB.getDatabase(database).getCollection(collection);
         List<Document> list = new LinkedList<>();
