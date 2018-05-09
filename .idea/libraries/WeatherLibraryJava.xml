@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="WeatherLibraryJava">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../Downloads/WeatherLibraryJava" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../../Downloads/WeatherLibraryJava/src" />
+    </SOURCES>
+  </library>
+</component>

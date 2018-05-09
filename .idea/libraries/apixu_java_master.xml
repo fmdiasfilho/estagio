@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="apixu-java-master">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../Downloads/apixu-java-master" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../Downloads/apixu-java-master/weatherlibraryjava.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../../Downloads/apixu-java-master" recursive="false" />
+  </library>
+</component>
