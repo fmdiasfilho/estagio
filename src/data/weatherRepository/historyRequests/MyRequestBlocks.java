@@ -8,7 +8,7 @@ public class MyRequestBlocks {
         public MyRequestBlocks() {
         }
 
-        public static enum Days {
+        public enum Days {
             One,
             Two,
             Three,
@@ -20,11 +20,11 @@ public class MyRequestBlocks {
             Nine,
             Ten;
 
-            private Days() {
+            Days() {
             }
         }
 
-        public static enum GetBy {
+        public enum GetBy {
             CityName,
             Zip,
             PostCode,
@@ -33,16 +33,16 @@ public class MyRequestBlocks {
             iata,
             IPAddress;
 
-            private GetBy() {
+            GetBy() {
             }
         }
 
-        public static enum MethodType {
+        public enum MethodType {
             Current,
             Forecast,
             History;
 
-            private MethodType() {
+            MethodType() {
             }
         }
 

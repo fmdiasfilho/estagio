@@ -1,6 +1,7 @@
 
 
 import brain.manipulation.Brain;
+import data.threads.UpdatingData;
 
 import java.util.Scanner;
 
@@ -10,6 +11,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         Brain b = new Brain();
+        new UpdatingData();
         Scanner in = new Scanner(System.in);
         int opt;
         Thread.sleep(5000);

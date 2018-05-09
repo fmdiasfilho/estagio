@@ -1,5 +1,7 @@
 package brain.manipulation;
 
+import com.ibm.watson.developer_cloud.assistant.v1.model.Context;
+import com.ibm.watson.developer_cloud.assistant.v1.model.MessageResponse;
 import com.weatherlibrary.datamodel.Hour;
 import data.DatabaseManipulation;
 import data.Enumerations.RequestTypes;
@@ -9,6 +11,9 @@ import data.weatherRepository.historyRequests.MyWeatherModel;
 import javafx.util.Pair;
 import org.junit.Test;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintStream;
 import java.util.*;
 
 import static org.junit.Assert.*;
@@ -29,13 +34,16 @@ public class Brain {
     private static final String TODAY_FORMAT = "Today at %s, the temperature was %.1f and a %s condition!";
 
     private DialogNodeManipulation conversation;
+    private ChatManipulation chat;
     private DatabaseManipulation data;
 
     public Brain() throws Exception {
-        conversation = new DialogNodeManipulation(CONV_USERNAME,CONV_PASSWORD,CONV_VERSION);
+        conversation = new DialogNodeManipulation(CONV_USERNAME, CONV_PASSWORD, CONV_VERSION);
+        chat = new ChatManipulation(CONV_USERNAME, CONV_PASSWORD, CONV_VERSION);
         data = new DatabaseManipulation();
-        new UpdatingData();
     }
+
+
 
     public void updateCurrentNode() throws Exception {
         Pair<Integer, Integer> rightNowHour = getHour();
@@ -45,7 +53,7 @@ public class Brain {
         conversation.updateDialogNode(CURRENT_NODE,newOutput);
     }
 
-    public void fillYesterday()throws Exception{
+    public void fillYesterday() {
         List<Hour> hours = data.getAllDocs("Lisbon", RequestTypes.Yesterday);
         int counter = 0;
         for(Hour h : hours){
@@ -55,7 +63,7 @@ public class Brain {
         }
     }
 
-    public void fillToday() throws Exception{
+    public void fillToday() {
         List<Hour> hours = data.getAllDocs("Lisbon", RequestTypes.Today);
         int counter = 0;
         for(Hour h : hours){
@@ -126,7 +134,7 @@ public class Brain {
     }
 
     @Test
-    public void fillYesterdayTest() throws Exception {
+    public void fillYesterdayTest() {
         List<Hour> hours = data.getAllDocs("Lisbon", RequestTypes.Yesterday);
         assertTrue(hours.size() == 24);
         int counter = 0;
@@ -141,7 +149,7 @@ public class Brain {
 
     // Unreachable nodes will be forecasts
    @Test
-    public void fillTodayTest() throws Exception{
+    public void fillTodayTest() {
         List<Hour> hours = data.getAllDocs("Lisbon",RequestTypes.Today);
         assertTrue(hours.size() == 14);
         int counter = 0;

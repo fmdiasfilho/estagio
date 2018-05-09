@@ -21,7 +21,7 @@ public class DataBaseOperations {
         clientDB = connect();
     }
 
-    private MongoClient connect() throws UnknownHostException {
+    private MongoClient connect() {
         MongoClientURI uri = new MongoClientURI(CLOUD_DB);
         return new MongoClient(uri);
     }

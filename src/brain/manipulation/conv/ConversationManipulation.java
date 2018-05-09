@@ -8,11 +8,11 @@ import static org.junit.Assert.assertNotNull;
 
 public abstract class ConversationManipulation {
 
-    private static final String CONV_USERNAME = "9eecfbe1-6284-41b7-aa41-4e637f3f12ca";
-    private static final String CONV_PASSWORD = "Q6JOwfeBWhxa";
-    private static final String CONV_VERSION = "2018-02-16";
+    public static final String CONV_USERNAME = "9eecfbe1-6284-41b7-aa41-4e637f3f12ca";
+    public static final String CONV_PASSWORD = "Q6JOwfeBWhxa";
+    public static final String CONV_VERSION = "2018-02-16";
 
-    protected static final String WORKSPACE_ID = "37b94673-abed-4221-af3b-4ef6b3bf302a";
+    public static final String WORKSPACE_ID = "37b94673-abed-4221-af3b-4ef6b3bf302a";
     protected static final String RETURN_FORMAT = "%s was done successfully, with %s: %s";
     protected final Assistant conversation;
 
@@ -21,7 +21,7 @@ public abstract class ConversationManipulation {
     }
 
     @Test
-    private void testAssistantCreation(){
+    public void testAssistantCreation(){
         Assistant conv = createConversation(CONV_USERNAME,CONV_PASSWORD,CONV_VERSION);
         assertNotNull(conv);
     }

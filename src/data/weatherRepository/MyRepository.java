@@ -70,7 +70,7 @@ public class MyRepository {
             return tryString;
         }
 
-        private String GetData(String url) throws IOException {
+        private String GetData(String url) {
             try {
                 URL obj = new URL(url);
                 HttpURLConnection con = (HttpURLConnection)obj.openConnection();

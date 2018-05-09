@@ -52,7 +52,7 @@ public class DatabaseManipulation {
         processRequestToDB(city,type,model);
     }
 
-    public Object getDocument(String city, RequestTypes type) throws Exception {
+    public Object getDocument(String city, RequestTypes type) {
         String id = type.toString().toLowerCase();
         String doc = db.getDocument(city,id,"_id",id);
         Object result = (type.equals(RequestTypes.Current))? gson.fromJson(doc,MyWeatherModel.class) : gson.fromJson(doc,Hour.class);
