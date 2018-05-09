@@ -16,8 +16,8 @@ public class CurrentThread implements Runnable{
                 while(true){
                 fillCurrent();
                     System.out.println("Current updated!");
-                    //5 minutes
-                Thread.sleep(300000);
+                    //5 minutes -> 30000
+                Thread.sleep(60000);
                 }
             } catch (Exception e) {
                 e.printStackTrace();

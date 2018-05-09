@@ -6,8 +6,6 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
-
-import javax.print.Doc;
 import java.net.UnknownHostException;
 import java.util.LinkedList;
 import java.util.List;
@@ -76,11 +74,6 @@ public class DataBaseOperations {
     public void updateDocument(String database, String collection,String attribute, String value, Document newDoc) {
         MongoCollection coll = clientDB.getDatabase(database).getCollection(collection);
         coll.updateOne(eq(attribute, value), new Document("$set", newDoc));
-    }
-
-    public void deleteDocument(String database, String collection, String attribute, String value){
-        MongoCollection coll = clientDB.getDatabase(database).getCollection(collection);
-        coll.deleteOne(eq(attribute, value));
     }
 
     public List<Document> getAllCollection(String database, String collection){

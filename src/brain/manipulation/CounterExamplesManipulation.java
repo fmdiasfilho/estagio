@@ -2,6 +2,7 @@ package brain.manipulation;
 
 import brain.manipulation.conv.ConversationManipulation;
 import com.ibm.watson.developer_cloud.assistant.v1.model.*;
+import org.junit.Test;
 
 import java.util.List;
 
@@ -40,5 +41,7 @@ public class CounterExamplesManipulation extends ConversationManipulation {
         conversation.deleteCounterexample(deleteCuonterexampleOptions).execute();
         System.out.format(RETURN_FORMAT,"Create", "Counter example", counterExample);
     }
+
+
 
 }

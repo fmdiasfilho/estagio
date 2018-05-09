@@ -2,7 +2,6 @@ package brain.manipulation;
 
 import brain.manipulation.conv.ConversationManipulation;
 import com.ibm.watson.developer_cloud.assistant.v1.model.*;
-
 import java.util.HashMap;
 import java.util.Map;
 

@@ -15,10 +15,8 @@ public class Main {
         Thread.sleep(5000);
        do{
            System.out.format(MENU,1,"Update current node");
-           System.out.format(MENU,2,"List nodes");
-           System.out.format(MENU,3,"Fill yesterday");
-           System.out.format(MENU,4,"Fill today");
-           System.out.format(MENU,5,"Remove nodes");
+           System.out.format(MENU,2,"Fill yesterday");
+           System.out.format(MENU,3,"Fill today");
            opt = in.nextInt();
            in.nextLine();
             switch (opt){
@@ -26,16 +24,10 @@ public class Main {
                     b.updateCurrentNode();
                     break;
                 case 2:
-                    b.list();
-                    break;
-                case 3:
                     b.fillYesterday();
                     break;
-                case 4:
+                case 3:
                     b.fillToday();
-                    break;
-                case 5:
-                    b.removeNodes();
                     break;
                 default:
                     break;

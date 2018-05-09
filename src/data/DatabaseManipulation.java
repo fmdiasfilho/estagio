@@ -138,7 +138,7 @@ public class DatabaseManipulation {
                         }
 
                     }else{
-                        db.deleteDocument(database,id,"_id", id + counter);
+                        break;
                     }
                 counter++;
             }
