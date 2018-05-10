@@ -66,6 +66,7 @@ public class ChatManipulationServer implements ChatManipulation {
 
         ResourceConfig config = new ResourceConfig();
         config.register(new ChatManipulationServer());
+        config.registerClasses(RequestsResponseFilter.class);
 
         JdkHttpServerFactory.createHttpServer( URI.create(URI_BASE), config);
 

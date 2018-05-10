@@ -8,7 +8,7 @@ public interface ChatManipulation {
 
     @GET
     @Path("/")
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
     String getInitialMessage();
 
     @POST
