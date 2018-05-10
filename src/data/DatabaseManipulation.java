@@ -9,6 +9,7 @@ import data.weatherRepository.historyRequests.HistoryWeatherModel;
 import data.weatherRepository.historyRequests.MyWeatherModel;
 import org.bson.Document;
 import org.junit.Test;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -35,33 +36,33 @@ public class DatabaseManipulation {
     public List<String> dates;
 
     public DatabaseManipulation() throws Exception {
-       treatDate();
-       r = new MyRepository();
-       gson = new Gson();
-       db = new DataBaseOperations();
-       cities = new LinkedList<>();
+        treatDate();
+        r = new MyRepository();
+        gson = new Gson();
+        db = new DataBaseOperations();
+        cities = new LinkedList<>();
     }
 
-    public void addCity(String newCity){
+    public void addCity(String newCity) {
         cities.add(newCity);
     }
 
     public void updateWeather(RequestTypes type, String city, String date) throws Exception {
         String request = requestWeather(type, city, date);
-        Object model = (date == null) ? gson.fromJson(request,MyWeatherModel.class) : gson.fromJson(request,HistoryWeatherModel.class);
-        processRequestToDB(city,type,model);
+        Object model = (date == null) ? gson.fromJson(request, MyWeatherModel.class) : gson.fromJson(request, HistoryWeatherModel.class);
+        processRequestToDB(city, type, model);
     }
 
     public Object getDocument(String city, RequestTypes type) {
         String id = type.toString().toLowerCase();
-        String doc = db.getDocument(city,id,"_id",id);
-        Object result = (type.equals(RequestTypes.Current))? gson.fromJson(doc,MyWeatherModel.class) : gson.fromJson(doc,Hour.class);
+        String doc = db.getDocument(city, id, "_id", id);
+        Object result = (type.equals(RequestTypes.Current)) ? gson.fromJson(doc, MyWeatherModel.class) : gson.fromJson(doc, Hour.class);
         return result;
     }
 
     @Test
-    public List<Hour> getAllDocs(String city, RequestTypes type){
-        List<Document> list = db.getAllCollection(city,type.toString().toLowerCase());
+    public List<Hour> getAllDocs(String city, RequestTypes type) {
+        List<Document> list = db.getAllCollection(city, type.toString().toLowerCase());
         assertNotNull(list);
         List<Hour> result = translateDocuments(list);
         assertNotNull(result);
@@ -70,22 +71,22 @@ public class DatabaseManipulation {
 
     private List<Hour> translateDocuments(List<Document> list) {
         List<Hour> result = new LinkedList<>();
-        for(Document d : list){
+        for (Document d : list) {
             String temp = gson.toJson(d);
-                Hour obj = gson.fromJson(temp,Hour.class);
-                result.add(obj);
-            }
+            Hour obj = gson.fromJson(temp, Hour.class);
+            result.add(obj);
+        }
         return result;
     }
 
-    private String translateDocument(Document doc){
+    private String translateDocument(Document doc) {
         return gson.toJson(doc);
     }
 
-    private void treatDate(){
+    private void treatDate() {
         DateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
         dates = new LinkedList<>();
-        for(int i = 0; i > -10 ; i--){
+        for (int i = 0; i > -10; i--) {
             dates.add(dateFormat.format(getDate(i)));
         }
     }
@@ -98,48 +99,48 @@ public class DatabaseManipulation {
 
 
     private String requestWeather(RequestTypes type, String value, String date) throws Exception {
-        if(!cities.contains(value)){
+        if (!cities.contains(value)) {
             addCity(value);
         }
         String request = "";
-        if(type.equals(RequestTypes.Current))
+        if (type.equals(RequestTypes.Current))
             request = r.GetWeatherData(API_KEY, RequestBlocks.GetBy.CityName, value);
-        else if(type.equals(RequestTypes.Today) || type.equals(RequestTypes.Yesterday)){
-            request = r.GetWeatherDataByHistory(API_KEY,RequestBlocks.GetBy.CityName,value,date);
-        }else{
+        else if (type.equals(RequestTypes.Today) || type.equals(RequestTypes.Yesterday)) {
+            request = r.GetWeatherDataByHistory(API_KEY, RequestBlocks.GetBy.CityName, value, date);
+        } else {
             return null;
         }
-       return request;
+        return request;
     }
 
     private void processRequestToDB(String database, RequestTypes type, Object model) {
         Document doc = null;
         String id = type.toString().toLowerCase();
-        if(type.equals(RequestTypes.Current)){
+        if (type.equals(RequestTypes.Current)) {
             doc = Document.parse(gson.toJson(model));
             doc.append("_id", id);
-            if(db.getDocument(database,id,"_id",id) == null){
-                db.addDocument(database,id,doc);
-            }else{
-                db.updateDocument(database, id, "_id", id,doc);
+            if (db.getDocument(database, id, "_id", id) == null) {
+                db.addDocument(database, id, doc);
+            } else {
+                db.updateDocument(database, id, "_id", id, doc);
             }
 
-        }else{
-            List<Hour> list = ((HistoryWeatherModel)model).getForecast().getForecastday().get(0).getHour();
+        } else {
+            List<Hour> list = ((HistoryWeatherModel) model).getForecast().getForecastday().get(0).getHour();
             int rightNowHour = type.equals(RequestTypes.Today) ? Calendar.getInstance().get(Calendar.HOUR_OF_DAY) : list.size();
-            for(Hour h: list){
-                    if(counter < rightNowHour){
+            for (Hour h : list) {
+                if (counter < rightNowHour) {
                     doc = Document.parse(gson.toJson(h));
                     doc.append("_id", id + counter);
-                        if(db.getDocument(database,id,"_id",id + counter) == null){
-                            db.addDocument(database,id,doc);
-                        }else{
-                            db.updateDocument(database, id, "_id", id + counter,doc);
-                        }
-
-                    }else{
-                        break;
+                    if (db.getDocument(database, id, "_id", id + counter) == null) {
+                        db.addDocument(database, id, doc);
+                    } else {
+                        db.updateDocument(database, id, "_id", id + counter, doc);
                     }
+
+                } else {
+                    break;
+                }
                 counter++;
             }
             counter = 0;
@@ -157,10 +158,10 @@ public class DatabaseManipulation {
         String todayRequest = requestWeather(RequestTypes.Today, "Lisbon", "2018-05-03");
         HistoryWeatherModel today = gson.fromJson(todayRequest, HistoryWeatherModel.class);
         assertNotNull(today);
-        processRequestToDB("Lisbon",RequestTypes.Today, today);
+        processRequestToDB("Lisbon", RequestTypes.Today, today);
         //Yesterday weather to DB
-        String yesterdayRequest = requestWeather(RequestTypes.Yesterday,"Lisbon", "2018-05-02");
-        HistoryWeatherModel yesterday = gson.fromJson(yesterdayRequest,HistoryWeatherModel.class);
+        String yesterdayRequest = requestWeather(RequestTypes.Yesterday, "Lisbon", "2018-05-02");
+        HistoryWeatherModel yesterday = gson.fromJson(yesterdayRequest, HistoryWeatherModel.class);
         assertNotNull(yesterday);
         processRequestToDB("Lisbon", RequestTypes.Yesterday, yesterday);
 
@@ -170,8 +171,8 @@ public class DatabaseManipulation {
 
     @Test
     private void updateWeatherTest() throws Exception {
-        updateWeather(RequestTypes.Current,"Lisbon", null);
-        updateWeather(RequestTypes.Today,"Lisbon", "2018-05-03");
-        updateWeather(RequestTypes.Yesterday,"Lisbon", "2018-05-02");
+        updateWeather(RequestTypes.Current, "Lisbon", null);
+        updateWeather(RequestTypes.Today, "Lisbon", "2018-05-03");
+        updateWeather(RequestTypes.Yesterday, "Lisbon", "2018-05-02");
     }
 }

@@ -4,7 +4,6 @@ package data.weatherRepository.historyRequests;//
 //
 
 import com.google.gson.annotations.SerializedName;
-import com.weatherlibrary.datamodel.Current;
 import com.weatherlibrary.datamodel.Forecast;
 import com.weatherlibrary.datamodel.Location;
 import data.weatherRepository.MyCurrentClass;

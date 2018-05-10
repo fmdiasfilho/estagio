@@ -8,7 +8,6 @@ import org.encog.ml.MLResettable;
 import org.encog.ml.data.MLDataSet;
 import org.encog.ml.data.temporal.TemporalDataDescription;
 import org.encog.ml.data.temporal.TemporalMLDataSet;
-import org.encog.ml.data.temporal.TemporalPoint;
 import org.encog.ml.factory.MLMethodFactory;
 import org.encog.ml.factory.MLTrainFactory;
 import org.encog.ml.train.MLTrain;
@@ -52,35 +51,35 @@ public class ForecastPrediction {
 
     private EncogPresistence presistence;
 
-    public ForecastPrediction(){
+    public ForecastPrediction() {
         presistence = new EncogPresistence();
     }
 
-    public static File getData(){
+    public static File getData() {
         return new File(MYDIR, "data.csv");
     }
 
-    public static TemporalMLDataSet initDataSet(){
+    public static TemporalMLDataSet initDataSet() {
         TemporalMLDataSet dataSet = new TemporalMLDataSet(INPUT_WINDOW_SIZE, PREDICT_WINDOW_SIZE);
 
         TemporalDataDescription temperatureDesc = new TemporalDataDescription(TemporalDataDescription.Type.RAW, true, true);
         dataSet.addDescription(temperatureDesc);
 
-        TemporalDataDescription deviationDesc = new TemporalDataDescription(TemporalDataDescription.Type.RAW,true, false);
+        TemporalDataDescription deviationDesc = new TemporalDataDescription(TemporalDataDescription.Type.RAW, true, false);
         dataSet.addDescription(deviationDesc);
 
         return dataSet;
     }
 
-    public MLRegression trainModel(MLDataSet trainingData, String methodName, String methodArquitecture, String trainerName, String trainerArgs){
+    public MLRegression trainModel(MLDataSet trainingData, String methodName, String methodArquitecture, String trainerName, String trainerArgs) {
         MLMethodFactory methodFactory = new MLMethodFactory();
         MLMethod method = methodFactory.create(methodName, methodArquitecture, trainingData.getInputSize(), trainingData.getIdealSize());
 
         MLTrainFactory trainFactory = new MLTrainFactory();
-        MLTrain train = trainFactory.create(method,trainingData,trainerName, trainerArgs);
+        MLTrain train = trainFactory.create(method, trainingData, trainerName, trainerArgs);
 
         // reset if improve is less than 1% over 5 cycles
-        if( method instanceof MLResettable && !(train instanceof ManhattanPropagation) ) {
+        if (method instanceof MLResettable && !(train instanceof ManhattanPropagation)) {
             train.addStrategy(new RequiredImprovementStrategy(5000));
         }
 
@@ -91,10 +90,10 @@ public class ForecastPrediction {
 
     }
 
-    public static TemporalMLDataSet createTraining(File rawFile){
+    public static TemporalMLDataSet createTraining(File rawFile) {
         TemporalMLDataSet trainingData = initDataSet();
-        ReadCSV csv = new ReadCSV(rawFile.toString(),true, ' ');
-        while (csv.next()){
+        ReadCSV csv = new ReadCSV(rawFile.toString(), true, ' ');
+        while (csv.next()) {
             //Process csv
 
             /*
@@ -113,7 +112,7 @@ public class ForecastPrediction {
     }
 
     //TODO -> need CSV with the informations about forecast
-    public TemporalMLDataSet predict(File rawFile, MLRegression model){
+    public TemporalMLDataSet predict(File rawFile, MLRegression model) {
 
         presistence.save(model);
         return null;
@@ -132,12 +131,11 @@ public class ForecastPrediction {
                 MLTrainFactory.TYPE_RPROP,
                 "");
         // Now predict
-        predict(rawFile,model);
+        predict(rawFile, model);
 
         Encog.getInstance().shutdown();
 
     }
-
 
 
 }

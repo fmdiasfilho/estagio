@@ -6,6 +6,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
+
 import java.net.UnknownHostException;
 import java.util.LinkedList;
 import java.util.List;
@@ -26,57 +27,57 @@ public class DataBaseOperations {
         return new MongoClient(uri);
     }
 
-    public void addDocument(String database, String collectionName, Document doc){
+    public void addDocument(String database, String collectionName, Document doc) {
         MongoDatabase db = clientDB.getDatabase(database);
         MongoCollection coll = db.getCollection(collectionName);
         coll.insertOne(doc);
     }
 
-    public void addManyDocs(String database, String collectionName, List<Document> docs){
+    public void addManyDocs(String database, String collectionName, List<Document> docs) {
         MongoCollection coll = clientDB.getDatabase(database).getCollection(collectionName);
         coll.insertMany(docs);
     }
 
-    public void dropCollection(String database, String collectionName){
+    public void dropCollection(String database, String collectionName) {
         clientDB.getDatabase(database).getCollection(collectionName).drop();
     }
 
-    public void dropDatabase(String database){
+    public void dropDatabase(String database) {
         clientDB.getDatabase(database).drop();
     }
 
-    public void addDatabase(String database){
+    public void addDatabase(String database) {
         clientDB.getDatabase(database);
     }
 
-    public void addCollection(String database, String collection){
+    public void addCollection(String database, String collection) {
         clientDB.getDatabase(database).createCollection(collection);
     }
 
-    public int listDB(){
+    public int listDB() {
         int result = 0;
-        for(String s : clientDB.listDatabaseNames()){
+        for (String s : clientDB.listDatabaseNames()) {
             result++;
             System.out.println(s);
         }
         return result;
     }
 
-    public String getDocument(String database, String collection, String attribute, String value){
+    public String getDocument(String database, String collection, String attribute, String value) {
         MongoCollection coll = clientDB.getDatabase(database).getCollection(collection);
-        Document doc = (Document) coll.find(eq(attribute,value)).first();
-        if(doc == null){
+        Document doc = (Document) coll.find(eq(attribute, value)).first();
+        if (doc == null) {
             return null;
         }
         return doc.toJson();
     }
 
-    public void updateDocument(String database, String collection,String attribute, String value, Document newDoc) {
+    public void updateDocument(String database, String collection, String attribute, String value, Document newDoc) {
         MongoCollection coll = clientDB.getDatabase(database).getCollection(collection);
         coll.updateOne(eq(attribute, value), new Document("$set", newDoc));
     }
 
-    public List<Document> getAllCollection(String database, String collection){
+    public List<Document> getAllCollection(String database, String collection) {
         MongoCollection coll = clientDB.getDatabase(database).getCollection(collection);
         List<Document> list = new LinkedList<>();
         MongoCursor<Document> cursor = coll.find().iterator();

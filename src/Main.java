@@ -1,5 +1,3 @@
-
-
 import brain.manipulation.Brain;
 import data.threads.UpdatingData;
 
@@ -15,13 +13,13 @@ public class Main {
         Scanner in = new Scanner(System.in);
         int opt;
         Thread.sleep(5000);
-       do{
-           System.out.format(MENU,1,"Update current node");
-           System.out.format(MENU,2,"Fill yesterday");
-           System.out.format(MENU,3,"Fill today");
-           opt = in.nextInt();
-           in.nextLine();
-            switch (opt){
+        do {
+            System.out.format(MENU, 1, "Update current node");
+            System.out.format(MENU, 2, "Fill yesterday");
+            System.out.format(MENU, 3, "Fill today");
+            opt = in.nextInt();
+            in.nextLine();
+            switch (opt) {
                 case 1:
                     b.updateCurrentNode();
                     break;
@@ -34,8 +32,8 @@ public class Main {
                 default:
                     break;
             }
-        }while (opt != 0);
-       System.exit(0);
+        } while (opt != 0);
+        System.exit(0);
     }
 
 }
