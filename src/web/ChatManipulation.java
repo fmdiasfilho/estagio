@@ -3,17 +3,16 @@ package web;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 
-@Path("/chat")
+@Path("/")
 public interface ChatManipulation {
 
     @GET
-    @Path("/")
     @Produces(MediaType.TEXT_PLAIN)
     String getInitialMessage();
 
     @POST
     @Path("/conversation")
-    @Consumes(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
     String sendQuestion(String message);
 }

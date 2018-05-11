@@ -17,7 +17,7 @@ public class ChatManipulationServer implements ChatManipulation {
     public static final String CONV_PASSWORD = "Q6JOwfeBWhxa";
     public static final String CONV_VERSION = "2018-02-16";
 
-    private List<Context> contextsLog = new LinkedList<>();
+    private Context context = new Context();
 
     private Assistant conversation = new Assistant(CONV_VERSION,CONV_USERNAME,CONV_PASSWORD);
 
@@ -38,17 +38,16 @@ public class ChatManipulationServer implements ChatManipulation {
         InputData input = new InputData.Builder(message).build();
         MessageOptions options = null;
 
-        if (contextsLog.isEmpty()) {
+        if (context == null) {
             options = new MessageOptions.Builder(ConversationManipulation.WORKSPACE_ID)
                     .input(input).build();
 
         } else {
             options = new MessageOptions.Builder(ConversationManipulation.WORKSPACE_ID)
-                    .input(input).context(contextsLog.get(contextsLog.size()-1)).build();
+                    .input(input).context(context).build();
         }
         MessageResponse reply = conversation.message(options).execute();
-        result += reply.getContext().getConversationId() + "\n";
-        contextsLog.add(reply.getContext());
+        context = reply.getContext();
         List<String> replyList = responseFormat(reply);
         for(String s : replyList){
             result += s + "\n";
