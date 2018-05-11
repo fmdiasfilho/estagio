@@ -8,14 +8,14 @@
 <body></body>
 <div id="chat">
 <p id="output"></p>
-	<form>
+	<form onsubmit="return false">
 		Input:<br>
 		<input type="text" id="input">
 		<br>
-		<input type="submit" id="button" value="Send" onclick="XMLHttpPostRequest()">
+		<input type="submit" id="button" value="Send" onclick="XMLPostRequest()" >
 	  </form>
 	  Response:
-		<p id="response"></p>
+	  <p id="response"></p>
 </div>
 </body>
 </html>

@@ -12,7 +12,7 @@ public interface ChatManipulation {
 
     @POST
     @Path("/conversation")
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.TEXT_PLAIN)
     String sendQuestion(String message);
 }
