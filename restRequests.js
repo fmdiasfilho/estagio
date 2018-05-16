@@ -30,12 +30,13 @@ function createRequest() {
             return;
           }
           var resp = req.responseText;
-          document.getElementById("output").innerHTML = resp;
+         generateDiv(resp,true);
         }
   }
 
   function XMLPostRequest(){
     var text = document.getElementById("input").value;
+    generateDiv(text, false);
     var req = createRequest();
     req.open("POST",POST_URL, true);
     req.setRequestHeader("Content-Type",
@@ -48,6 +49,29 @@ function createRequest() {
     return;
     }
     var resp = req.responseText;
-    document.getElementById("response").innerHTML = resp;
+    //document.getElementById("response").innerHTML = resp;
+    generateDiv(resp, true);
   }
+}
+
+function generateDiv(resp, isBot){
+  var iDiv = document.createElement('div');
+  var para = document.createElement("p");
+  para.className = 'chat-message';
+  var node = document.createTextNode(resp);
+  var element = document.getElementById("logs");
+  if(isBot == true){
+    iDiv.className = 'chat bot';
+    iDiv.id = 'bot';
+  }else{
+    iDiv.className = 'chat self';
+    iDiv.id = 'self';
+    var order = document.createElement('div');
+    order.className = 'blank';
+    iDiv.appendChild(order);
+  }
+ 
+  para.appendChild(node);
+  iDiv.appendChild(para);
+  element.appendChild(iDiv);
 }

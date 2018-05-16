@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
-<body>
-	<title>Chatbot</title>
-	<script TYPE="text/javascript" SRC="restRequests.js"></script>
+<head>
+		<title>Chatbot</title>
+		<script TYPE="text/javascript" SRC="restRequests.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>	
 <h2>Chatbot</h2>
 
-<body></body>
-<div id="chat">
-<p id="output"></p>
-	<form onsubmit="return false">
-		Input:<br>
-		<input type="text" id="input">
-		<br>
-		<input type="submit" id="button" value="Send" onclick="XMLPostRequest()" >
-	  </form>
-	  Response:
-	  <p id="response"></p>
+
+<div class="chatbox">
+	<div class="chatlogs" id="logs"></div>
+
+	<div class="chat-form">
+		<textarea id="input"></textarea>
+		<button onclick="XMLPostRequest()">Send</button>
+	</div>
 </div>
+
 </body>
 </html>
