@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/beautiful-weather.jpg");
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text {
+    /* remove textbox */
+    display: inline-block;
+    margin: 0;
+    font-family: tahoma, sans-serif;
+    color: white;
+    font-size: 100px;
+    transform: translate(615px, 20px);
+    border: none !important;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+body, html {
+    height: 80%;
+}
+
+.chatbox {
+    width: 500px;
+    min-width: 390px;
+    height: 600px;
+    background: rgb(247, 245, 245);
+    margin: 20px auto;
+    border: 5px solid grey;
+    border-radius: 10px;
+}
+
+.border{
+    width: 128px;
+    height: 128px;
+    border: 5px solid #999;
+    background: #ddd;
+    display: inline-block;
+    transform: translate(-145px, 350px);
+}
+
+.border .weather-desc{
+    display: inline-block;
+    transform: translate(15px, -15px);
+    font-size: 20px;
+}
+
+.border .weather-image {
+    width: 100px;
+    height: 100px;
+    background-image: url("http://cdn.apixu.com/weather/64x64/day/113.png");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100px, 100px;
+    transform: translate(8px, 5px);
+}
+
+.chatlogs{
+    padding: 10px;
+    width: 100%;
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overflow: scroll;
+}
+
+.chatlogs::-webkit-scrollbar{
+    width: 10px;
+}
+
+.chatlogs::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: rgba(0,0,0,0.1);
+}
+
+.chat{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.chat .chat-message {
+    width: 85%;
+    padding: 15px;
+    margin: 5px 10px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.bot .chat-message {
+    background: #6cc9ad;
+}
+
+.self .blank{
+    width: 30px;
+    height: 30px;
+}
+
+.self .chat-message{
+    background: #448288;
+}
+
+.chat-form{
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    transform: translate(10%, 20px);
+}
+
+.chat-form textarea {
+    background: #fbfbfb;
+    width: 60%;
+    height: 50px;
+    border: 2px solid grey;
+    border-radius: 3px;
+    resize: none;
+    padding: 10px;
+    font-size: 18px;
+    color: #666;
+}
+
+.chat-form textarea:focus {
+    background: #fff;
+}
+
+.chat-form textarea::-webkit-scrollbar{
+    width: 10px;
+}
+
+.chat-form textarea::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: rgba(0,0,0,0.1);
+}
+
+.chat-form button {
+    background: gray;
+    padding: 5px 15px;
+    font-size: 30px;
+    color: #fff;
+    border: none;
+    margin: 0 10px;
+    border-radius: 3px;
+    box-shadow: 0 3px 0 #424647;
+    cursor: pointer;
+
+    -webkit-transition: background .2s ease;
+    -moz-transition: background .2s ease;
+    -o-transition: background .2s ease;
+
+}
+
+.chat-form button:hover {
+    background: rgb(184, 183, 183);
+}
