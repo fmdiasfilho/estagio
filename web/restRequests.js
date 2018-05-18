@@ -37,6 +37,7 @@ function createRequest() {
   function XMLPostRequest(){
     var text = document.getElementById("input").value;
     generateDiv(text, false);
+    document.getElementById("input").value ='';
     var req = createRequest();
     req.open("POST",POST_URL, true);
     req.setRequestHeader("Content-Type",

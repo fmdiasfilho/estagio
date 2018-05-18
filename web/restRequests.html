@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<title>Chatbot</title>
 		<script TYPE="text/javascript" SRC="restRequests.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>	
-<h2>Chatbot</h2>
 
-
+<p class="text">
+	Chatbot
+</p>
+<div class="border">
+<div class="weather-image"></div>
+<p class="weather-desc"> Sunny day </p>
+</div>
 <div class="chatbox">
 	<div class="chatlogs" id="logs"></div>
 
 	<div class="chat-form">
 		<textarea id="input"></textarea>
-		<button onclick="XMLPostRequest()">Send</button>
+		<button id="button" onclick="XMLPostRequest()">Send</button>
 	</div>
 </div>
 
