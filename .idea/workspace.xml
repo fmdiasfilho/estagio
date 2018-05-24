@@ -4,7 +4,15 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="486ce63f-ba87-4bb8-8f6c-036dd367c825" name="Default" comment="" />
+    <list default="true" id="486ce63f-ba87-4bb8-8f6c-036dd367c825" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_ibm_watson_developer_cloud_java_sdk_5_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companies_src/AnalyzeServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companies_src/search/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/estagio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/estagio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/forecast/ForecastPrediction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/forecast/encog/EncogPresistence.java" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ChatManipulationServer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/web/ChatManipulationServer.java">
+      <file leaf-file-name="Search.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/companies_src/search/Search.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+            <state relative-caret-position="319">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -26,41 +34,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Brain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/brain/manipulation/Brain.java">
+      <file leaf-file-name="EntitiesResult.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/natural-language-understanding/5.1.1/natural-language-understanding-5.1.1-sources.jar!/com/ibm/watson/developer_cloud/natural_language_understanding/v1/model/EntitiesResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+            <state relative-caret-position="140">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1324#1325#0" expanded="true" />
+                <element signature="e#1446#1447#0" expanded="true" />
+                <element signature="e#1467#1468#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <file leaf-file-name="AnalysisResults.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/natural-language-understanding/5.1.1/natural-language-understanding-5.1.1-sources.jar!/com/ibm/watson/developer_cloud/natural_language_understanding/v1/model/AnalysisResults.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            <state relative-caret-position="140">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
+              <folding>
+                <element signature="e#2650#2651#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdatingData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/threads/UpdatingData.java">
+      <file leaf-file-name="WatsonService.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/core/5.4.0/core-5.4.0-sources.jar!/com/ibm/watson/developer_cloud/service/WatsonService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CurrentThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/threads/CurrentThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="28" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="28" />
+            <state relative-caret-position="323">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
             </state>
           </provider>
         </entry>
@@ -90,9 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/dataClasses/Forecast.java" />
-        <option value="$PROJECT_DIR$/src/data/WeatherClass.java" />
-        <option value="$PROJECT_DIR$/src/chatbot/operations/BotServices.java" />
         <option value="$PROJECT_DIR$/src/data/IntentCollection.java" />
         <option value="$PROJECT_DIR$/src/data/IntentData/IntentCollection.java" />
         <option value="$PROJECT_DIR$/src/data/IntentData/IntentData.java" />
@@ -141,10 +142,13 @@
         <option value="$PROJECT_DIR$/src/brain/manipulation/DialogNodeManipulation.java" />
         <option value="$PROJECT_DIR$/src/data/DataBaseOperations.java" />
         <option value="$PROJECT_DIR$/src/data/DatabaseManipulation.java" />
+        <option value="$PROJECT_DIR$/companies_src/Main.java" />
+        <option value="$PROJECT_DIR$/companies_src/AnalyzeServer.java" />
+        <option value="$PROJECT_DIR$/companies_src/search/Search.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="814" />
     <option name="height" value="860" />
   </component>
@@ -153,12 +157,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
               <item name="estagio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="estagio" type="462c0819:PsiDirectoryNode" />
+              <item name="companies_src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="estagio" type="462c0819:PsiDirectoryNode" />
+              <item name="companies_src" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
@@ -220,7 +236,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
@@ -230,7 +245,7 @@
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Desktop/Internship/intershipSamples" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.69735324" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -240,15 +255,15 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="brain.manipulation" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\NB24217\Documents\GitHub\estagio\tomcat\webapps\chatbot\WEB-INF" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\NB24217\Documents\GitHub\estagio\src" />
       <recent name="D:\NB24217\Documents\GitHub\estagio\tomcat\webapps\chatbot\WEB-INF\classes\servlet" />
       <recent name="D:\NB24217\Documents\GitHub\estagio\tomcat\webapps\chatbot\WEB-INF\classes" />
       <recent name="D:\NB24217\Documents\GitHub\estagio\src\servlet" />
       <recent name="D:\NB24217\Documents\GitHub\estagio\src\data\weatherRepository" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\NB24217\Documents\GitHub\estagio\tomcat\webapps\chatbot\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -263,7 +278,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Search">
     <configuration name="ChatManipulationServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="web.ChatManipulationServer" />
       <module name="estagio" />
@@ -285,6 +300,17 @@
       <module name="estagio" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
+    <configuration name="Search" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="search.Search" />
+      <module name="estagio" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="search.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -301,29 +327,6 @@
       <option name="PACKAGE_NAME" value="data" />
       <option name="MAIN_CLASS_NAME" value="data.DatabaseManipulation" />
       <option name="METHOD_NAME" value="processAPIRequestTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="DialogNodeManipulation.dialogNodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="estagio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="web.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="brain.manipulation" />
-      <option name="MAIN_CLASS_NAME" value="brain.manipulation.DialogNodeManipulation" />
-      <option name="METHOD_NAME" value="dialogNodeTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -384,18 +387,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.DialogNodeManipulation.dialogNodeTest" />
       <item itemvalue="Application.GUI" />
       <item itemvalue="Application.ChatManipulationServer" />
       <item itemvalue="JUnit.DatabaseManipulation.processAPIRequestTest" />
+      <item itemvalue="Application.Search" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Search" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.DatabaseManipulation.processAPIRequestTest" />
         <item itemvalue="Application.ChatManipulationServer" />
         <item itemvalue="Application.GUI" />
-        <item itemvalue="JUnit.DialogNodeManipulation.dialogNodeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -445,7 +448,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -455,8 +458,8 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50125" side_tool="true" weight="0.32985657" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49875" weight="0.33333334" />
       <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49875" weight="0.33333334" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3293011" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
@@ -465,8 +468,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39784947" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39784947" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -479,14 +482,14 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293011" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49875" visible="true" weight="0.33333334" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49865592" visible="true" weight="0.6233933" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49865592" visible="true" weight="0.6233933" />
       <window_info id="Structure" order="1" sideWeight="0.5013441" side_tool="true" weight="0.26156813" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49875" weight="0.33333334" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -495,7 +498,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3293011" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50125" side_tool="true" weight="0.32985657" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.3293011" />
@@ -508,45 +511,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="23" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/companies_src/search/Search.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="24" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="563" selection-start-line="563" selection-end-line="563" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/jdk/internal/reflect/DelegatingMethodAccessorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/encog/encog-core/3.3.0/encog-core-3.3.0-sources.jar!/org/encog/ml/data/temporal/TemporalMLDataSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="357" column="16" selection-start-line="357" selection-start-column="16" selection-end-line="357" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/encog/encog-core/3.3.0/encog-core-3.3.0-sources.jar!/org/encog/ml/MLRegression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/encog/encog-core/3.3.0/encog-core-3.3.0-sources.jar!/org/encog/ml/MLMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -806,7 +782,7 @@
     <entry file="file://$PROJECT_DIR$/src/data/threads/UpdatingData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -836,7 +812,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/brain/manipulation/Brain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="1445">
           <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -846,8 +822,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/web/ChatManipulationServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
+        <state relative-caret-position="659">
           <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/companies_src/AnalyzeServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/natural-language-understanding/5.1.1/natural-language-understanding-5.1.1-sources.jar!/com/ibm/watson/developer_cloud/natural_language_understanding/v1/model/AnalysisResults.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+          <folding>
+            <element signature="e#2650#2651#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/core/5.4.0/core-5.4.0-sources.jar!/com/ibm/watson/developer_cloud/service/WatsonService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/natural-language-understanding/5.1.1/natural-language-understanding-5.1.1-sources.jar!/com/ibm/watson/developer_cloud/natural_language_understanding/v1/model/EntitiesResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#1324#1325#0" expanded="true" />
+            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1467#1468#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/companies_src/search/Search.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -910,7 +932,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.69735324" />
               </list>
             </option>
           </splitter-proportions>

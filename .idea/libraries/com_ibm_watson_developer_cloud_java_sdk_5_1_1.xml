@@ -1,0 +1,71 @@
+<component name="libraryTable">
+  <library name="com.ibm.watson.developer_cloud:java-sdk:5.1.1" type="repository">
+    <properties maven-id="com.ibm.watson.developer_cloud:java-sdk:5.1.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/java-sdk/5.1.1/java-sdk-5.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/assistant/5.1.1/assistant-5.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/conversation/5.1.1/conversation-5.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/core/5.1.1/core-5.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.8.0/okhttp-3.8.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/logging-interceptor/3.8.0/logging-interceptor-3.8.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp-urlconnection/3.8.0/okhttp-urlconnection-3.8.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/bundles/repackaged/jersey-jsr166e/2.25.1/jersey-jsr166e-2.25.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/discovery/5.1.1/discovery-5.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/language-translator/5.1.1/language-translator-5.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/natural-language-classifier/5.1.1/natural-language-classifier-5.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/natural-language-understanding/5.1.1/natural-language-understanding-5.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/personality-insights/5.1.1/personality-insights-5.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/speech-to-text/5.1.1/speech-to-text-5.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/text-to-speech/5.1.1/text-to-speech-5.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/tone-analyzer/5.1.1/tone-analyzer-5.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/visual-recognition/5.1.1/visual-recognition-5.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/java-sdk/5.1.1/java-sdk-5.1.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/assistant/5.1.1/assistant-5.1.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/conversation/5.1.1/conversation-5.1.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/core/5.1.1/core-5.1.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.8.0/okhttp-3.8.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/squareup/okio/okio/1.13.0/okio-1.13.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/logging-interceptor/3.8.0/logging-interceptor-3.8.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp-urlconnection/3.8.0/okhttp-urlconnection-3.8.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.0/gson-2.8.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/bundles/repackaged/jersey-jsr166e/2.25.1/jersey-jsr166e-2.25.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/discovery/5.1.1/discovery-5.1.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/language-translator/5.1.1/language-translator-5.1.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/natural-language-classifier/5.1.1/natural-language-classifier-5.1.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/natural-language-understanding/5.1.1/natural-language-understanding-5.1.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/personality-insights/5.1.1/personality-insights-5.1.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/speech-to-text/5.1.1/speech-to-text-5.1.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/text-to-speech/5.1.1/text-to-speech-5.1.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/tone-analyzer/5.1.1/tone-analyzer-5.1.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/visual-recognition/5.1.1/visual-recognition-5.1.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/java-sdk/5.1.1/java-sdk-5.1.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/assistant/5.1.1/assistant-5.1.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/conversation/5.1.1/conversation-5.1.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/core/5.1.1/core-5.1.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.8.0/okhttp-3.8.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/squareup/okio/okio/1.13.0/okio-1.13.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/logging-interceptor/3.8.0/logging-interceptor-3.8.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp-urlconnection/3.8.0/okhttp-urlconnection-3.8.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.0/gson-2.8.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/bundles/repackaged/jersey-jsr166e/2.25.1/jersey-jsr166e-2.25.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/discovery/5.1.1/discovery-5.1.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/language-translator/5.1.1/language-translator-5.1.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/natural-language-classifier/5.1.1/natural-language-classifier-5.1.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/natural-language-understanding/5.1.1/natural-language-understanding-5.1.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/personality-insights/5.1.1/personality-insights-5.1.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/speech-to-text/5.1.1/speech-to-text-5.1.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/text-to-speech/5.1.1/text-to-speech-5.1.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/tone-analyzer/5.1.1/tone-analyzer-5.1.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/ibm/watson/developer_cloud/visual-recognition/5.1.1/visual-recognition-5.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
