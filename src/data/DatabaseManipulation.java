@@ -60,12 +60,9 @@ public class DatabaseManipulation {
         return result;
     }
 
-    @Test
     public List<Hour> getAllDocs(String city, RequestTypes type) {
         List<Document> list = db.getAllCollection(city, type.toString().toLowerCase());
-        assertNotNull(list);
         List<Hour> result = translateDocuments(list);
-        assertNotNull(result);
         return result;
     }
 
@@ -148,7 +145,7 @@ public class DatabaseManipulation {
     }
 
     @Test
-    private void processAPIRequestTest() throws Exception {
+    public void processAPIRequestTest() throws Exception {
         //Current weather to DB
         String currentRequest = requestWeather(RequestTypes.Current, "Lisbon", null);
         MyWeatherModel current = gson.fromJson(currentRequest, MyWeatherModel.class);
@@ -170,7 +167,7 @@ public class DatabaseManipulation {
     }
 
     @Test
-    private void updateWeatherTest() throws Exception {
+    public void updateWeatherTest() throws Exception {
         updateWeather(RequestTypes.Current, "Lisbon", null);
         updateWeather(RequestTypes.Today, "Lisbon", "2018-05-03");
         updateWeather(RequestTypes.Yesterday, "Lisbon", "2018-05-02");
