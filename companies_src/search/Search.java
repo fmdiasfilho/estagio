@@ -70,9 +70,14 @@ public class Search {
             }
         });
 
-        output.forEach(out -> {
-            System.out.println(out);
-        });
+        if(output.size() > 0){
+            System.out.println("I found this companies:");
+            output.forEach(out -> {
+                System.out.println(out);
+            });
+        }else{
+            System.out.println("There is no companies found!");
+        }
     }
 
     private static NaturalLanguageUnderstanding createConnection() {
@@ -80,7 +85,7 @@ public class Search {
     }
 
     public static void main(String[] args) {
-        Search.analyze("http://www.bit.pt/empresas-do-grupo-novabase-lideram-ranking-de-inovacao-em-servicos/");
+        Search.analyze("https://genius.com/Russ-what-they-want-lyrics");
     }
 
 }

@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="486ce63f-ba87-4bb8-8f6c-036dd367c825" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_ibm_watson_developer_cloud_java_sdk_5_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companies_src/AnalyzeServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companies_src/search/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/estagio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/estagio.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/forecast/ForecastPrediction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/forecast/encog/EncogPresistence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/companies_src/search/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/companies_src/search/Search.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,10 +20,12 @@
       <file leaf-file-name="Search.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/companies_src/search/Search.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="83" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="489">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2949#2950#0" expanded="true" />
+                <element signature="e#3028#3029#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,7 +145,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="814" />
     <option name="height" value="860" />
   </component>
@@ -448,7 +445,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -469,7 +466,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39784947" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39784947" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -511,14 +508,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/companies_src/search/Search.java</url>
-          <line>18</line>
-          <properties />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="24" />
     </breakpoint-manager>
   </component>
@@ -868,10 +857,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/companies_src/search/Search.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="489">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2949#2950#0" expanded="true" />
+            <element signature="e#3028#3029#0" expanded="true" />
           </folding>
         </state>
       </provider>
