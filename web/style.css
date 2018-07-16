@@ -10,68 +10,49 @@ body {
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
 }
 
 .text {
+    border: 5px black solid;
     /* remove textbox */
-    display: inline-block;
-    margin: 0;
     font-family: tahoma, sans-serif;
     color: white;
-    font-size: 100px;
-    transform: translate(615px, 20px);
+    font-size: 95px;
     border: none !important;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 body, html {
-    height: 80%;
+    height: 100%;
 }
 
 .chatbox {
-    width: 500px;
-    min-width: 390px;
-    height: 600px;
+    width: 35%;
+    height: 75%;
     background: rgb(247, 245, 245);
-    margin: 20px auto;
     border: 5px solid grey;
     border-radius: 10px;
-}
-
-.border{
-    width: 128px;
-    height: 128px;
-    border: 5px solid #999;
-    background: #ddd;
-    display: inline-block;
-    transform: translate(-145px, 350px);
-}
-
-.border .weather-desc{
-    display: inline-block;
-    transform: translate(15px, -15px);
-    font-size: 20px;
-}
-
-.border .weather-image {
-    width: 100px;
-    height: 100px;
-    background-image: url("http://cdn.apixu.com/weather/64x64/day/113.png");
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: 100px, 100px;
-    transform: translate(8px, 5px);
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
 }
 
 .chatlogs{
     padding: 10px;
     width: 100%;
-    height: 450px;
+    height: 80%;
     overflow-x: hidden;
     overflow-y: scroll;
     overflow: scroll;
+    background: #fbfbfbb0;
 }
 
 .chatlogs::-webkit-scrollbar{
@@ -113,22 +94,24 @@ body, html {
 }
 
 .chat-form{
-    margin-top: 20px;
+    height: 20%;
+    width: 100%;
     display: flex;
-    align-items: flex-start;
-    transform: translate(10%, 20px);
+    align-items: center;
+    justify-content: center;
 }
 
 .chat-form textarea {
     background: #fbfbfb;
-    width: 60%;
-    height: 50px;
+    width: 70%;
+    height: 45%;
     border: 2px solid grey;
     border-radius: 3px;
     resize: none;
-    padding: 10px;
-    font-size: 18px;
+    font-size: 20px;
     color: #666;
+    align-items: center;
+    justify-content: center;
 }
 
 .chat-form textarea:focus {
@@ -146,21 +129,38 @@ body, html {
 
 .chat-form button {
     background: gray;
-    padding: 5px 15px;
     font-size: 30px;
     color: #fff;
     border: none;
-    margin: 0 10px;
+    margin: 0 15px;
     border-radius: 3px;
     box-shadow: 0 3px 0 #424647;
     cursor: pointer;
-
+    transition: background 2s;
     -webkit-transition: background .2s ease;
     -moz-transition: background .2s ease;
     -o-transition: background .2s ease;
-
+    width: 20%;
+    height: 45%;
+    float: right;
 }
 
 .chat-form button:hover {
     background: rgb(184, 183, 183);
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .chatbox{
+        width:120%;
+        height: 80%;
+    }
 }

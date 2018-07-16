@@ -8,7 +8,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="apixu-java-master" level="project" />
     <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.8.2" level="project" />
     <orderEntry type="library" exported="" name="org.mongodb:bson:3.7.0" level="project" />
     <orderEntry type="library" exported="" name="org.mongodb:mongo-java-driver:3.7.0-rc0" level="project" />
@@ -24,5 +23,14 @@
     <orderEntry type="library" name="javax.activation:activation:1.1.1" level="project" />
     <orderEntry type="library" name="org.glassfish.jersey.inject:jersey-hk2:2.27" level="project" />
     <orderEntry type="library" name="com.ibm.watson.developer_cloud:java-sdk:5.1.1" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/apis/apixu-java-master/weatherlibraryjava.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
