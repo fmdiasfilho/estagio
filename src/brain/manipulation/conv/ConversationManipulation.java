@@ -6,6 +6,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
 
+/**
+ * @author Pedro Feiteira, n48119
+ * This abstract class is used to initialize the IBM Watson assitant for all the Chat bot operations
+ * watch -> https://www.ibm.com/watson/developercloud/conversation/api/v1/java.html?java
+ */
 public abstract class ConversationManipulation {
 
     private static final String CONV_USERNAME = "9eecfbe1-6284-41b7-aa41-4e637f3f12ca";

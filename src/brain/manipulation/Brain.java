@@ -15,6 +15,10 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * @author Pedro Feiteira, n48119
+ * This class 
+ */
 public class Brain {
 
     //Access data

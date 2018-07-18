@@ -13,7 +13,6 @@
     <orderEntry type="library" exported="" name="org.mongodb:mongo-java-driver:3.7.0-rc0" level="project" />
     <orderEntry type="library" exported="" name="com.googlecode.json-simple:json-simple:1.1.1" level="project" />
     <orderEntry type="library" exported="" name="com.ibm.watson.developer_cloud:assistant:5.4.0" level="project" />
-    <orderEntry type="library" exported="" name="org.encog:encog-core:3.3.0" level="project" />
     <orderEntry type="library" name="org.glassfish.jersey.core:jersey-common:2.27" level="project" />
     <orderEntry type="library" name="org.glassfish.jersey.core:jersey-client:2.27" level="project" />
     <orderEntry type="library" name="org.glassfish.jersey.core:jersey-server:2.27" level="project" />
