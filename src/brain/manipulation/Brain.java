@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 
 /**
  * @author Pedro Feiteira, n48119
- * This class 
+ * This class
  */
 public class Brain {
 
