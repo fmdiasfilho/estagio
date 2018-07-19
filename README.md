@@ -10,31 +10,30 @@ A simple weather chat bot that give the Lisbon weather to a user.
  
 The basic architecture is composed by two components:
 
--	**Web Browser:** This component uses a HTML (web page) and a JavaScript file. The HTML is a simple GUI and the JavaScript is used to manage the HTML’s elements functionalities.
+- **Web Browser:** This component uses a HTML (web page) and a JavaScript file. The HTML is a simple GUI and the JavaScript is used to manage the HTML’s elements functionalities.
 
--	**Chatbot:** Components is represented by five sub components (explained above).
+- **Chatbot:** Components is represented by five sub components (explained above).
  ![image2](https://github.com/fmdiasfilho/estagio/blob/master/docs/images/2.jpg?raw=true)
 
 	The **Chatbot** components are:
 
--	**Rest Server:** This component is a Java Rest Server that can be called as the Brain of the operation. Besides being a Rest server and handle the http requests, this component’s role is insert the updated database information, into the chat-bot “knowledge”, to create the most accurate response.
+- **Rest Server:** This component is a Java Rest Server that handles the http requests from the user (messages to the chatbot).
 
 - **Brain:** This component is used to update the weather information from the database to the Chatbot dialog nodes.
 
--	**IBM Watson:** The server used API. The requests are made by HTTP and everything can be changed online (service workspace) or by consuming the API. This API was chosen because of his powerful computing, because it is very easy to use it and because it is almost full customizable by using the API. The chat bot is represented by dialog nodes that recognize some specific expressions.
+- **IBM Watson:** The server that we request with this service API. The requests are made by HTTP and everything can be changed online (service workspace) or by consuming the API. This API was chosen because of his powerful computing, because it is very easy to use it and because it is almost full customizable by using the API. The chat bot is represented by dialog nodes that recognize some specific expressions.
 
--	**MongoDB:** This component represents the weather information database. All the weather data from the requests to the weather API are saved into this database. It is saved the current, yesterday and today until the current weather information.
+- **MongoDB:** This component represents the weather information database. All the weather data from the requests to the weather API are saved into this database. It is saved the current, yesterday and today until the current weather information.
 
--	**Apixu Server:** The server that has the weather information. This server’s API was chosen because it is free and has a simple response.
+- **Apixu Server:** The server that has the weather information. This server’s API was chosen because it is free and has a simple response.
 
 ## Workflow
 ### There are three workflows:
 #### Weather information update:
 ![image3](https://github.com/fmdiasfilho/estagio/blob/master/docs/images/3.jpg?raw=true)
 
-The steps are:
 
-**1.**	There is initialized threads to create http requests to the weather server. It will be updated the current time, yesterday and today until the current time weather.
+**1.**	It is initialized threads to create http requests to the weather server. It will be updated the current time, yesterday and today until the current time weather.
 
 **2.**	The response comes in JSON format. When we got it, we transform into an Object using GSON and then it will be saved into the MongoDB database
 Only the database update is executed by threads. The chatbot’s dialog update is manual.
@@ -43,8 +42,6 @@ Only the database update is executed by threads. The chatbot’s dialog update i
 When we prefer, we manually update the dialog nodes with the current database weather information. 
 
  ![image4](https://github.com/fmdiasfilho/estagio/blob/master/docs/images/4.jpg?raw=true)
-
-The steps of this workflow are:
 
 **1.**	Access the MongoDB database and get the information that we are updating (the update is separated by the current node, yesterday and today nodes).
 
