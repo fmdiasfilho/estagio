@@ -10,6 +10,10 @@ import data.weatherRepository.MyCurrentClass;
 
 import java.io.Serializable;
 
+/**
+ * @author Pedro Feiteira, n48119
+ * This class is used as GSON Apixu response to object conversion
+ */
 public class MyWeatherModel implements Serializable {
     private static final long serialVersionUID = 1L;
     @SerializedName("location")

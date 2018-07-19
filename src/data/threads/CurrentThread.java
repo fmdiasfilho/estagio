@@ -3,6 +3,10 @@ package data.threads;
 import data.DatabaseManipulation;
 import data.Enumerations.RequestTypes;
 
+/**
+ * @author Pedro Feiteira, n48119
+ * Thread class that updates automatically the database current weather information document
+ */
 public class CurrentThread implements Runnable {
 
     private void fillCurrent() throws Exception {

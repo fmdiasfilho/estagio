@@ -13,6 +13,11 @@ import java.util.List;
 
 import static com.mongodb.client.model.Filters.eq;
 
+/**
+ * @author Pedro Feiteira, n48119
+ * This class has the MongoDB needed operations
+ * For more information -> http://mongodb.github.io/mongo-java-driver/3.7/driver/getting-started/quick-start/
+ */
 public class DataBaseOperations {
 
     private static final String CLOUD_DB = "mongodb://Pedro_Feiteira_Celfocus:dztsR2T97aYgQ4I5@internship-shard-00-00-b5j2n.mongodb.net:27017,internship-shard-00-01-b5j2n.mongodb.net:27017,internship-shard-00-02-b5j2n.mongodb.net:27017/test?ssl=true&replicaSet=Internship-shard-0&authSource=admin";

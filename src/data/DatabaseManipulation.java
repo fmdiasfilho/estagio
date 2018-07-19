@@ -20,6 +20,11 @@ import java.util.List;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
+/**
+ * @author Pedro Feiteira, n48119
+ * This class is used to insert weather informations into the database. This class is used too to get this
+ * database information for chatbot dialog nodes
+ */
 public class DatabaseManipulation {
 
 
@@ -47,12 +52,25 @@ public class DatabaseManipulation {
         cities.add(newCity);
     }
 
+    /**
+     * Update database weather information
+     * @param type, update the current/yesterday/today node
+     * @param city, city that we want to update
+     * @param date, date that we need to know
+     * @throws Exception
+     */
     public void updateWeather(RequestTypes type, String city, String date) throws Exception {
         String request = requestWeather(type, city, date);
         Object model = (date == null) ? gson.fromJson(request, MyWeatherModel.class) : gson.fromJson(request, HistoryWeatherModel.class);
         processRequestToDB(city, type, model);
     }
 
+    /**
+     * Get a database document
+     * @param city, city name
+     * @param type, request type
+     * @return Document object
+     */
     public Object getDocument(String city, RequestTypes type) {
         String id = type.toString().toLowerCase();
         String doc = db.getDocument(city, id, "_id", id);
@@ -60,12 +78,23 @@ public class DatabaseManipulation {
         return result;
     }
 
+    /**
+     * Get all documents from a collection
+     * @param city, city name
+     * @param type, request type
+     * @return List of Documents object
+     */
     public List<Hour> getAllDocs(String city, RequestTypes type) {
         List<Document> list = db.getAllCollection(city, type.toString().toLowerCase());
         List<Hour> result = translateDocuments(list);
         return result;
     }
 
+    /**
+     * Get weather information by hour
+     * @param list, documents list
+     * @return hour object list
+     */
     private List<Hour> translateDocuments(List<Document> list) {
         List<Hour> result = new LinkedList<>();
         for (Document d : list) {
@@ -88,6 +117,11 @@ public class DatabaseManipulation {
         }
     }
 
+    /**
+     * Get date by the amount of days
+     * @param amountOfDays, number of the amount of days that we want to go back
+     * @return result time
+     */
     private Date getDate(int amountOfDays) {
         final Calendar cal = Calendar.getInstance();
         cal.add(Calendar.DATE, amountOfDays);
@@ -95,6 +129,14 @@ public class DatabaseManipulation {
     }
 
 
+    /**
+     * Makes the request to the Apixu server
+     * @param type, request type
+     * @param value, city name
+     * @param date, date that we need to know the information
+     * @return response in JSON format
+     * @throws Exception
+     */
     private String requestWeather(RequestTypes type, String value, String date) throws Exception {
         if (!cities.contains(value)) {
             addCity(value);
@@ -110,6 +152,12 @@ public class DatabaseManipulation {
         return request;
     }
 
+    /**
+     * Process the JSON received to the database
+     * @param database, database name
+     * @param type, current/today/yesterday
+     * @param model, information data
+     */
     private void processRequestToDB(String database, RequestTypes type, Object model) {
         Document doc = null;
         String id = type.toString().toLowerCase();

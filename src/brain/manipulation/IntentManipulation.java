@@ -5,6 +5,11 @@ import com.ibm.watson.developer_cloud.assistant.v1.model.*;
 
 import java.util.List;
 
+/**
+ * @author Pedro Feiteira, n48119
+ * This class has the IBM Watson assistant intent operations
+ * For more information watch -> https://www.ibm.com/watson/developercloud/conversation/api/v1/java.html?java#intents-api
+ */
 public class IntentManipulation extends ConversationManipulation {
 
     public IntentManipulation(String username, String password, String version) {

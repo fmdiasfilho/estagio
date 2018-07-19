@@ -1,5 +1,9 @@
 package data.threads;
 
+/**
+ * @author Pedro Feiteira, n48119
+ * Class that launch the updating threads
+ */
 public class UpdatingData {
 
     public UpdatingData() {

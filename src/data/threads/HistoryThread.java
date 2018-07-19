@@ -3,11 +3,15 @@ package data.threads;
 import data.DatabaseManipulation;
 import data.Enumerations.RequestTypes;
 
+/**
+ * @author Pedro Feiteira, n48119
+ * Thread class that updates automatically the database history weather information documents
+ */
 public class HistoryThread implements Runnable {
 
     private void fillTodayCollection() throws Exception {
-        DatabaseManipulation db = new DatabaseManipulation();
-        db.updateWeather(RequestTypes.Today, "Lisbon", db.dates.get(0));
+        DatabaseManipulation dbToday = new DatabaseManipulation();
+        dbToday.updateWeather(RequestTypes.Today, "Lisbon", dbToday.dates.get(0));
     }
 
     public void run() {

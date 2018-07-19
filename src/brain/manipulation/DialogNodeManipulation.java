@@ -6,6 +6,11 @@ import com.ibm.watson.developer_cloud.assistant.v1.model.*;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author Pedro Feiteira, n48119
+ * This class has the IBM Watson assistant dialog node operations
+ * For more information watch -> https://www.ibm.com/watson/developercloud/conversation/api/v1/java.html?java#dialog-nodes-api
+ */
 public class DialogNodeManipulation extends ConversationManipulation {
 
     public DialogNodeManipulation(String username, String password, String version) {

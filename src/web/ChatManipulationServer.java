@@ -12,6 +12,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author Pedro Feiteira, n48119
+ * Rest server class
+ */
 public class ChatManipulationServer implements ChatManipulation {
     public static final String CONV_USERNAME = "9eecfbe1-6284-41b7-aa41-4e637f3f12ca";
     public static final String CONV_PASSWORD = "Q6JOwfeBWhxa";
@@ -21,6 +25,10 @@ public class ChatManipulationServer implements ChatManipulation {
 
     private Assistant conversation = new Assistant(CONV_VERSION,CONV_USERNAME,CONV_PASSWORD);
 
+    /**
+     * HTTP server GET Method
+     * @return chatbot inital message
+     */
    public String getInitialMessage() {
         String dialogNode = "Welcome";
         String result = "";
@@ -32,8 +40,13 @@ public class ChatManipulationServer implements ChatManipulation {
         return result.substring(1, length - 1);
     }
 
+    /**
+     * HTTP server POST Method. Receives the user input text and send it to the IBM Watson server by using Assistant
+     * service.
+     * @param message, user's input message
+     * @return chatbot response
+     */
    public String sendQuestion(String message) {
-       //TODO result
        String result = "";
         InputData input = new InputData.Builder(message).build();
         MessageOptions options = null;
@@ -55,6 +68,11 @@ public class ChatManipulationServer implements ChatManipulation {
         return result;
     }
 
+    /**
+     * Get the chatbot response
+     * @param response, Full response object
+     * @return chatbot response
+     */
     private List<String> responseFormat(MessageResponse response){
         return response.getOutput().getText();
     }

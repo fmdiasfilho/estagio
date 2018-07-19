@@ -3,7 +3,7 @@ import data.threads.UpdatingData;
 
 import java.util.Scanner;
 
-public class Main {
+public class ManualMaintenance {
 
     private static final String MENU = "%d stands for %s\n";
 

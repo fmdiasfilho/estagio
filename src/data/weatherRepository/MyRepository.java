@@ -12,6 +12,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * @author Pedro Feiteira, n48119
+ * Class to create multiple Apixu requests
+ * For more information watch -> https://www.apixu.com/doc/getting-started.aspx
+ */
 public class MyRepository {
 
     private String APIURL = "http://api.apixu.com/v1";

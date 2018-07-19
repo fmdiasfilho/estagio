@@ -3,6 +3,10 @@ package web;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 
+/**
+ * @author Pedro Feiteira, n48119
+ * Rest server interface
+ */
 @Path("/")
 public interface ChatManipulation {
 
