@@ -89,7 +89,7 @@ There are some improvements that can be made to this project:
 
 ## References:
 
-###Java Dependencies Documentations
+### Java Dependencies Documentations
 - [IBM Watson Assistant](https://www.ibm.com/watson/developercloud/conversation/api/v1/java.html?java)
 - [MongoDB](http://mongodb.github.io/mongo-java-driver/3.7/driver/getting-started/quick-start/)
 - [GSON](https://github.com/google/gson/blob/master/UserGuide.md)
