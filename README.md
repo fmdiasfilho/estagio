@@ -5,12 +5,12 @@ A simple weather chat bot that give the Lisbon weather to a user.
 
 ## Architecture 
 
-![image1](https://cdn.modernfarmer.com/wp-content/uploads/2017/12/Funny-Sheep-Facts.jpg)
+![image1](https://github.com/fmdiasfilho/estagio/blob/master/docs/images/1.jpg?raw=true)
  
 The basic architecture is composed by two components:
 -	**Web browser:** This component uses a HTML (web page) and a JavaScript file. The HTML is a simple GUI and the JavaScript is used to manage the HTML’s elements functionalities.
 -	**Brain:** Components is represented by four sub components (explained above).
- ![image2](https://cdn.modernfarmer.com/wp-content/uploads/2017/12/Funny-Sheep-Facts.jpg)
+ ![image2](https://github.com/fmdiasfilho/estagio/blob/master/docs/images/2.jpg?raw=true)
 	The **Brain** components are:
 -	**Rest Server:** This component is a Java Rest Server that can be called as the Brain of the operation. Besides being a Rest server and handle the http requests, this component’s role is insert the updated database information, into the chat-bot “knowledge”, to create the most accurate response.
 -	**IBM Watson:** The server used API. The requests are made by HTTP and everything can be changed online (service workspace) or by consuming the API. This API was chosen because of his powerful computing, because it is very easy to use it and because it is almost full customizable by using the API. The chat bot is represented by dialog nodes that recognize some specific expressions.
@@ -20,7 +20,7 @@ The basic architecture is composed by two components:
 ## Workflow
 ### There are three workflows:
 #### Weather information update:
-![image3](https://cdn.modernfarmer.com/wp-content/uploads/2017/12/Funny-Sheep-Facts.jpg)
+![image3](https://github.com/fmdiasfilho/estagio/blob/master/docs/images/3.jpg?raw=true)
 The steps are:
 **1.**	There is initialized threads to create http requests to the weather server. It will be updated the current time, yesterday and today until the current time weather
 **2.**	The response comes in JSON format. When we got it, we transform into an Object using GSON and then it will be saved into the MongoDB database
@@ -29,7 +29,7 @@ Only the database update is executed by threads. The chatbot’s dialog update i
 #### Update the chatbot dialog nodes: 
 When we prefer, we manually update the dialog nodes with the current database weather information. 
 
- ![image4](https://cdn.modernfarmer.com/wp-content/uploads/2017/12/Funny-Sheep-Facts.jpg)
+ ![image4](https://github.com/fmdiasfilho/estagio/blob/master/docs/images/4.jpg?raw=true)
 
 The steps of this workflow are:
 **1.**	Access the MongoDB database and get the information that we are updating (the update is separated by the current node, yesterday and today nodes)
@@ -37,7 +37,7 @@ The steps of this workflow are:
 **3.**	We insert the new information and send it to the server with this information update
 
 ### Handle the user HTTP requests:
-![image5](https://cdn.modernfarmer.com/wp-content/uploads/2017/12/Funny-Sheep-Facts.jpg)
+![image5](https://github.com/fmdiasfilho/estagio/blob/master/docs/images/5.jpg?raw=true)
 When the user wants to know the weather, what happen is:
 **1.**	The user inserts a weather message into the GUI
 **2.**	The message is inserted into the web page as a chat bubble (DOM element)
