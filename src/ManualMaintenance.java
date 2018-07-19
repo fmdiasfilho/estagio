@@ -3,6 +3,10 @@ import data.threads.UpdatingData;
 
 import java.util.Scanner;
 
+/**
+ * @author Pedro Feiteira, n48119
+ * This class is used to update dialog nodes manually
+ */
 public class ManualMaintenance {
 
     private static final String MENU = "%d stands for %s\n";

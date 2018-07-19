@@ -8,7 +8,6 @@ import org.glassfish.jersey.jdkhttp.JdkHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
 import java.net.URI;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 

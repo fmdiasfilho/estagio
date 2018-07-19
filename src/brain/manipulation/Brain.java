@@ -8,7 +8,6 @@ import data.weatherRepository.historyRequests.MyWeatherModel;
 import javafx.util.Pair;
 import org.junit.Test;
 import web.ChatManipulation;
-import web.ChatManipulationServer;
 
 import java.util.Calendar;
 import java.util.List;
@@ -117,9 +116,8 @@ public class Brain {
      * @param city, city that we want to get the information
      * @param type, if it is current, yesterday or today weather information (database collection)
      * @return document to a weather model conversion
-     * @throws Exception
      */
-    private MyWeatherModel getDocument(String city, RequestTypes type) throws Exception {
+    private MyWeatherModel getDocument(String city, RequestTypes type) {
         return (MyWeatherModel) data.getDocument(city, type);
     }
 

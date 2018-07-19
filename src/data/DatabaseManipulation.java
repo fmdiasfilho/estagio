@@ -40,7 +40,7 @@ public class DatabaseManipulation {
     //To have access in otherclasses
     public List<String> dates;
 
-    public DatabaseManipulation() throws Exception {
+    public DatabaseManipulation() {
         treatDate();
         r = new MyRepository();
         gson = new Gson();

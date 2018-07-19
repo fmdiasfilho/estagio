@@ -7,7 +7,6 @@ import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
-import java.net.UnknownHostException;
 import java.util.LinkedList;
 import java.util.List;
 

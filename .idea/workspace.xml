@@ -5,26 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="486ce63f-ba87-4bb8-8f6c-036dd367c825" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManualMaintenance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ManualMaintenance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManualMaintenance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/brain/manipulation/Brain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/brain/manipulation/Brain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/brain/manipulation/CounterExamplesManipulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/brain/manipulation/CounterExamplesManipulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/brain/manipulation/DialogNodeManipulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/brain/manipulation/DialogNodeManipulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/brain/manipulation/ExamplesManipulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/brain/manipulation/ExamplesManipulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/brain/manipulation/IntentManipulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/brain/manipulation/IntentManipulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/DataBaseOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/DataBaseOperations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/DatabaseManipulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/DatabaseManipulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Enumerations/RequestTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Enumerations/RequestTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/threads/CurrentThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/threads/CurrentThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/threads/HistoryThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/threads/HistoryThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/threads/UpdatingData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/threads/UpdatingData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/weatherRepository/MyCurrentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/weatherRepository/MyCurrentClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/weatherRepository/MyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/weatherRepository/MyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/weatherRepository/historyRequests/HistoryRequestBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/weatherRepository/historyRequests/HistoryRequestBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/weatherRepository/historyRequests/HistoryWeatherModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/weatherRepository/historyRequests/HistoryWeatherModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/weatherRepository/historyRequests/MyRequestBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/weatherRepository/historyRequests/MyRequestBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/weatherRepository/historyRequests/MyWeatherModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/weatherRepository/historyRequests/MyWeatherModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web/ChatManipulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/ChatManipulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/web/ChatManipulationServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/ChatManipulationServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/web/RequestsResponseFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/RequestsResponseFilter.java" afterDir="false" />
     </list>
@@ -37,10 +21,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MyRequestBlocks.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/weatherRepository/historyRequests/MyRequestBlocks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MyCurrentClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/weatherRepository/MyCurrentClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="101">
               <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
             </state>
           </provider>
@@ -49,7 +42,7 @@
       <file leaf-file-name="MyRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/weatherRepository/MyRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-391">
+            <state relative-caret-position="117">
               <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
             </state>
           </provider>
@@ -58,12 +51,8 @@
       <file leaf-file-name="DatabaseManipulation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/DatabaseManipulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-514">
+            <state relative-caret-position="2310">
               <caret line="158" column="37" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="37" />
-              <folding>
-                <element signature="e#2927#2928#0" expanded="true" />
-                <element signature="e#2966#2967#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -71,37 +60,8 @@
       <file leaf-file-name="DataBaseOperations.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/DataBaseOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="18" column="109" selection-start-line="18" selection-start-column="109" selection-end-line="18" selection-end-column="109" />
-              <folding>
-                <element signature="e#788#789#0" expanded="true" />
-                <element signature="e#824#825#0" expanded="true" />
-                <element signature="e#1635#1636#0" expanded="true" />
-                <element signature="e#1688#1689#0" expanded="true" />
-                <element signature="e#1736#1737#0" expanded="true" />
-                <element signature="e#1782#1783#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CounterExamplesManipulation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/brain/manipulation/CounterExamplesManipulation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="70" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConversationManipulation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/brain/manipulation/conv/ConversationManipulation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="11" column="88" selection-start-line="11" selection-start-column="88" selection-end-line="11" selection-end-column="88" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -118,22 +78,35 @@
       <file leaf-file-name="ChatManipulationServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web/ChatManipulationServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
+            <state relative-caret-position="153">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2605#2606#0" expanded="true" />
-                <element signature="e#2658#2659#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestsResponseFilter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RequestsResponseFilter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web/RequestsResponseFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManualMaintenance.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ManualMaintenance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,7 +114,7 @@
       <file leaf-file-name="MyWeatherModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/weatherRepository/historyRequests/MyWeatherModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
+            <state relative-caret-position="238">
               <caret line="14" column="65" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -177,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/data/Collections/IntentCollection.java" />
         <option value="$PROJECT_DIR$/src/data/Collections/IntentManage.java" />
         <option value="$PROJECT_DIR$/src/BuildResponse.java" />
         <option value="$PROJECT_DIR$/src/brain/BuildResponse.java" />
@@ -216,17 +188,18 @@
         <option value="$PROJECT_DIR$/src/data/threads/CurrentThread.java" />
         <option value="$PROJECT_DIR$/src/data/threads/UpdatingData.java" />
         <option value="$PROJECT_DIR$/src/data/threads/HistoryThread.java" />
-        <option value="$PROJECT_DIR$/src/brain/manipulation/Brain.java" />
         <option value="$PROJECT_DIR$/src/data/weatherRepository/historyRequests/HistoryWeatherModel.java" />
         <option value="$PROJECT_DIR$/src/data/weatherRepository/historyRequests/HistoryRequestBuilder.java" />
         <option value="$PROJECT_DIR$/src/data/weatherRepository/historyRequests/MyRequestBlocks.java" />
         <option value="$PROJECT_DIR$/src/data/weatherRepository/historyRequests/MyWeatherModel.java" />
         <option value="$PROJECT_DIR$/src/data/weatherRepository/MyCurrentClass.java" />
         <option value="$PROJECT_DIR$/src/data/weatherRepository/MyRepository.java" />
-        <option value="$PROJECT_DIR$/src/data/DataBaseOperations.java" />
         <option value="$PROJECT_DIR$/src/data/DatabaseManipulation.java" />
         <option value="$PROJECT_DIR$/src/web/ChatManipulation.java" />
         <option value="$PROJECT_DIR$/src/web/ChatManipulationServer.java" />
+        <option value="$PROJECT_DIR$/src/ManualMaintenance.java" />
+        <option value="$PROJECT_DIR$/src/brain/manipulation/Brain.java" />
+        <option value="$PROJECT_DIR$/src/data/DataBaseOperations.java" />
         <option value="$PROJECT_DIR$/src/web/RequestsResponseFilter.java" />
       </list>
     </option>
@@ -264,6 +237,41 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="manipulation" type="462c0819:PsiDirectoryNode" />
               <item name="conv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="estagio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="estagio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="Enumerations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="estagio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="threads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="estagio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="weatherRepository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="estagio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="weatherRepository" type="462c0819:PsiDirectoryNode" />
+              <item name="historyRequests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="estagio" type="b2602c69:ProjectViewProjectNode" />
@@ -489,6 +497,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -504,6 +513,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49865592" visible="true" weight="0.21722364" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3293011" />
       <window_info id="Structure" order="1" sideWeight="0.5013441" side_tool="true" weight="0.26156813" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -515,7 +525,6 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3293011" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -690,38 +699,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/ExamplesManipulation.java">
+    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/conv/ConversationManipulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" selection-start-line="7" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/IntentManipulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-123">
-          <caret line="10" column="121" selection-start-line="10" selection-start-column="121" selection-end-line="10" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ManualMaintenance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/DialogNodeManipulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="8" selection-end-line="12" selection-end-column="3" />
+        <state relative-caret-position="187">
+          <caret line="11" column="88" selection-start-line="11" selection-start-column="88" selection-end-line="11" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/brain/manipulation/Brain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1428">
-          <caret line="84" column="5" lean-forward="true" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+        <state relative-caret-position="153">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/CounterExamplesManipulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="70" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/DialogNodeManipulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/ExamplesManipulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/IntentManipulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="121" selection-start-line="10" selection-start-column="121" selection-end-line="10" selection-end-column="121" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -737,8 +765,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data/threads/CurrentThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -779,7 +807,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data/weatherRepository/historyRequests/MyWeatherModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
+        <state relative-caret-position="238">
           <caret line="14" column="65" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -789,58 +817,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data/weatherRepository/MyCurrentClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="101">
           <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data/weatherRepository/MyRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
+        <state relative-caret-position="117">
           <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/CounterExamplesManipulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="70" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/DataBaseOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="18" column="109" selection-start-line="18" selection-start-column="109" selection-end-line="18" selection-end-column="109" />
-          <folding>
-            <element signature="e#788#789#0" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#1635#1636#0" expanded="true" />
-            <element signature="e#1688#1689#0" expanded="true" />
-            <element signature="e#1736#1737#0" expanded="true" />
-            <element signature="e#1782#1783#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data/DatabaseManipulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-514">
+        <state relative-caret-position="2310">
           <caret line="158" column="37" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="37" />
-          <folding>
-            <element signature="e#2927#2928#0" expanded="true" />
-            <element signature="e#2966#2967#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brain/manipulation/conv/ConversationManipulation.java">
+    <entry file="file://$PROJECT_DIR$/src/data/DataBaseOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="11" column="88" selection-start-line="11" selection-start-column="88" selection-end-line="11" selection-end-column="88" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -853,20 +852,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/web/ChatManipulationServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
+        <state relative-caret-position="153">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2605#2606#0" expanded="true" />
-            <element signature="e#2658#2659#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/web/RequestsResponseFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ManualMaintenance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
