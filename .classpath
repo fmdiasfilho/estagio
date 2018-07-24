@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/estagio/src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/companies_src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/com.google.code.gson:gson:2.8.2"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/org.mongodb:bson:3.7.0"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/org.mongodb:mongo-java-driver:3.7.0-rc0"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/com.googlecode.json-simple:json-simple:1.1.1"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/com.ibm.watson.developer_cloud:assistant:5.4.0"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/org.glassfish.jersey.core:jersey-common:2.27"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/org.glassfish.jersey.core:jersey-client:2.27"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/org.glassfish.jersey.core:jersey-server:2.27"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/org.glassfish.jersey.media:jersey-media-json-jackson:2.27"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/org.glassfish.jersey.containers:jersey-container-jdk-http:2.27"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/com.fasterxml.jackson.jaxrs:jackson-jaxrs-xml-provider:2.9.5"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/javax.activation:activation:1.1.1"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/org.glassfish.jersey.inject:jersey-hk2:2.27"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/com.ibm.watson.developer_cloud:java-sdk:5.1.1"/>
+	<classpathentry kind="lib" path="/estagio/apis/apixu-java-master/weatherlibraryjava.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
